@@ -1,0 +1,21 @@
+ro.build.id=ECLAIR
+ro.build.display.id=OpenEclair
+ro.build.version.incremental=eng.ctso.20100116.160642
+ro.build.date=Sat Jan 16 16:55:40 EST 2010
+ro.build.date.utc=1263678940
+ro.product.model=T-Mobile G1
+ro.product.brand=tmobile
+ro.product.name=kila
+ro.product.device=dream
+ro.product.board=trout
+ro.product.cpu.abi=armeabi
+ro.product.manufacturer=htc
+ro.product.locale.language=en
+ro.product.locale.region=US
+ro.wifi.channels=
+ro.board.platform=msm7k
+# ro.build.product is obsolete; use ro.product.device
+ro.build.product=dream
+# Do not try to parse ro.build.description or .fingerprint
+ro.build.description=passion-user 2.1 ERD72 22132 release-keys
+ro.build.fingerprint=google/passion/passion/mahimahi:2.1/ERD72/22132:user/release-keys

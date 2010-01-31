@@ -1,0 +1,84 @@
+#!/system/bin/sh
+#
+# Cyanogen & Twisted A2SD for G1 & MT3G users
+# Modified by Wes Garner to copy MT3G App to data partition and clean up A2SD
+#  * Removed some old checks like /system/sd/data)
+#  * Moved EXT Mount to separate script
+
+{
+CPUINFO=$(cat /proc/cpuinfo | busybox grep Hardware | busybox cut - -d ' ' -f 2,3);
+if [ "${CPUINFO}" == "trout" ]; then
+    if [ -e /dev/block/mmcblk0p2 ];
+    then
+	# move apps and dalvik cache from internal memory to sdcard
+    	for i in app app-private dalvik-cache;
+	    do
+	    if [ ! -d /system/sd/$i ];
+            then
+        	mkdir /system/sd/$i;
+            fi;
+
+            busybox chown 1000:1000 /system/sd/$i;
+            busybox chmod 771 /system/sd/$i;
+
+       	    if [ -d /data/$i ] && [ ! -h /data/$i ];
+       	    then
+           	 busybox cp -a /data/$i/* /system/sd/$i/;
+	         busybox rm -f /data/$i/*;
+            fi;
+    	done;
+
+   	# symlink app dirs - they must be on the same filesystem
+    	for i in app app-private;
+    	do
+       	    if [ -d /data/$i ] && [ ! -h /data/$i ];
+       	    then
+                busybox rm -rf /data/$i;
+                busybox ln -s /system/sd/$i /data/$i;
+       	    fi;
+    	done;
+
+        # bind mount dalvik-cache so we can still boot without the sdcard
+        busybox mount -o bind /system/sd/dalvik-cache /data/dalvik-cache;
+        busybox chown 1000:1000 /data/dalvik-cache;
+        busybox chmod 771 /data/dalvik-cache;
+	
+    echo "--- Apps2SD Activated";
+    setprop cm.a2sd.active 1;
+
+    else
+    setprop cm.a2sd.active 0;
+    fi;	
+fi;
+
+}
+
+# Setup for Magic
+{
+CPUINFO=$(cat /proc/cpuinfo | busybox grep Hardware | busybox cut - -d ' ' -f 2,3);
+if [ "${CPUINFO}" == "sapphire" ]; then
+
+	if [ -e /dev/block/mmcblk0p2 ];
+	then
+	if [ ! -e /data/app/wgbuild ]; then
+	echo "--- MT3G - Copying Apps at /system/sd to Data Partition";
+	    for i in app app-private;
+	    do
+	        if [ -d /system/sd/$i ];
+        	then
+		    if [ ! -e /data/app/$i ]; then
+			cp -a /system/sd/$i/* /data/$i/;
+		    fi;
+        	fi;
+	    done;
+	echo "" > /data/app/wgbuild;
+	fi;
+      fi;
+   	setprop cm.a2sd.active 0;
+    echo "--- MT3G -Apps2SD Not Activated";
+fi;
+
+}
+
+
+

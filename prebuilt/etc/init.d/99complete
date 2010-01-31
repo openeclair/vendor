@@ -1,0 +1,9 @@
+#!/system/bin/sh
+
+rosystem;
+
+echo "---init.d Complete, Ready to Boot";
+
+sync;
+setprop cm.filesystem.ready 1;
+

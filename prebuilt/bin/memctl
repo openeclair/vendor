@@ -1,0 +1,50 @@
+#!/system/bin/sh
+#
+# Compcache manager
+# shade@chemlab.org (cyanogen)
+#
+# Modifications for OpenEclair 
+#  by Chris Soyars <ctsoyars@gmail.com>
+
+CCDEV=/dev/block/ramzswap0
+SWDEV=`busybox fdisk -l /dev/block/mmcblk0 | busybox grep "Linux swap" | busybox awk '{print $1}'`
+MODULE=ramzswap
+SIZE=`getprop persist.service.memctl_size`
+MODULES_DIR=/system/modules/lib/modules/`uname -r`
+
+case "$1" in
+	disabled)
+	rmmod $MODULE >/dev/null 2>&1
+	swapoff $CCDEV >/dev/null 2>&1
+	swapoff $SWDEV >/dev/null 2>&1
+		;;
+
+	compcache)
+	/system/bin/sh /system/bin/memctl disabled
+        modprobe $MODULE
+        rzscontrol $CCDEV --init -d $SIZE
+        swapon $CCDEV
+		;;
+
+	swap)
+	/system/bin/sh /system/bin/memctl disabled
+	swapon $SWDEV
+		;;
+
+	both)
+	/system/bin/sh /system/bin/memctl disabled
+	modprobe $MODULE
+	rzscontrol $CCDEV --init -d $SIZE -b $SWDEV
+	swapon $CCDEV
+		;;
+
+    stats)
+        rzscontrol $CCDEV --stats
+        ;;
+	*)
+		echo "Usage: $0 {start|stop|stats}"
+		exit 1
+esac
+
+exit 0
+

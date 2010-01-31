@@ -1,0 +1,55 @@
+#! /system/bin/sh
+#
+# firstboot.sh
+# WesGarner for OpenEclair
+
+{
+    CPUINFO=$(cat /proc/cpuinfo | busybox grep Hardware | busybox cut - -d ' ' -f 2,3);
+    if [ "${CPUINFO}" == "sapphire" ]; then
+	echo "---AudioPara4.csv fix";
+	    mv /system/etc/AudioPara4-sapphire.csv /system/etc/AudioPara4.csv; > /dev/null
+	
+    fi;
+}
+
+echo "--- Clearing Cache";
+    if [ -e /system/bin/clearcache ]; then
+	/system/bin/sh /system/bin/clearcache;
+    fi;
+
+
+echo "--- Symlinking System Dalvik-Cache to Data Partition";
+for sysfile in /data/system-cache/*.dex ; do
+	if [ -e /data/dalvik-cache/$(basename $sysfile) ]; then
+		busybox rm /data/dalvik-cache/$(basename $sysfile); > /dev/null
+	fi;
+	if [ -h /data/dalvik-cache/$(basename $sysfile) ]; then
+		busybox rm /data/dalvik-cache/$(basename $sysfile); > /dev/null
+	fi;
+	busybox ln -s $sysfile /data/dalvik-cache/$(basename $sysfile);
+done;
+
+echo "--- Symlinking Media Folder";
+	busybox rm -r /data/.media;  > /dev/null
+	busybox ln -s /data/media /system/media;
+
+echo "--- Symlinking some System Apps";
+busybox rm -r /data/app_s;
+busybox mv /data/app_s_tmp /data/app_s;
+for sysapp in /data/app_s/* ; do
+	if [ -e /system/app/$(basename $sysapp) ]; then
+		busybox rm /system/app/$(basename $sysapp); > /dev/null
+	fi;
+	if [ -h /system/app/$(basename $sysapp) ]; then
+		busybox rm /system/app/$(basename $sysapp); > /dev/null
+	fi;
+	busybox ln -s $sysapp /system/app/$(basename $sysapp);
+	echo "$sysapp Symlinked to data partition";
+done;
+
+echo "--- Running System App/Framework Fix - This will take a while";
+    if [ -e /system/bin/appfix ]; then
+	/system/bin/sh /system/bin/appfix;
+    fi;
+
+

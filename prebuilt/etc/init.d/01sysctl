@@ -1,0 +1,4 @@
+#!/system/bin/sh
+# WesGarner for OpenEclair
+
+sysctl -p

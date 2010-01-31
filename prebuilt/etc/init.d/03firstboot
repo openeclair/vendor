@@ -1,0 +1,17 @@
+#!/system/bin/sh
+# execute any postinstall script then kill it
+# WesGarner for OpenEclair
+
+if [ -e /system/bin/firstboot ];
+then
+    echo "--- Executing Firstboot Script";
+    /system/bin/sh /system/bin/firstboot;
+    rm -f /system/bin/firstboot;
+fi;
+
+if [ -e /system/bin/secondboot ];
+then
+    echo "--- Copying SecondBoot Script to Firstboot";
+    busybox cp /system/bin/secondboot /system/bin/firstboot;
+    rm -f /system/bin/secondboot;
+fi;
