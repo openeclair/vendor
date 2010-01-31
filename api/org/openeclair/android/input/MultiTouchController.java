@@ -1,4 +1,4 @@
-package com.cyanogenmod.android.input;
+package org.openeclair.android.input;
 
 /**
  * MultiTouchController.java

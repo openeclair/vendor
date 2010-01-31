@@ -15,6 +15,6 @@
 -->
 
 <permissions>
-    <library name="com.cyanogenmod.android"
-            file="/system/framework/com.cyanogenmod.android.jar" />
+    <library name="org.openeclair.android"
+            file="/system/framework/org.openeclair.android.jar" />
 </permissions>
