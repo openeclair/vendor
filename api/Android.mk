@@ -3,7 +3,7 @@ LOCAL_PATH:= $(call my-dir)
 ########################
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := com.cyanogenmod.android.xml
+LOCAL_MODULE := org.openeclair.android.xml
 LOCAL_MODULE_TAGS := user
 LOCAL_MODULE_CLASS := ETC
 
@@ -21,8 +21,8 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files)
 
-LOCAL_MODULE := com.cyanogenmod.android
-LOCAL_REQUIRES_MODULE =: com.cyanogenmod.android.xml
+LOCAL_MODULE := org.openeclair.android
+LOCAL_REQUIRES_MODULE =: org.openeclair.android.xml
 LOCAL_JAVA_LIBRARIES := core framework
 
 include $(BUILD_JAVA_LIBRARY)
