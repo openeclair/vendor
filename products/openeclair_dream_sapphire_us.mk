@@ -44,7 +44,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/build.prop:system/build.prop \
 						vendor/openeclair/prebuilt/build.trout.prop:system/build.trout.prop \
 						vendor/openeclair/prebuilt/bin/appfix:system/bin/appfix \
 						vendor/openeclair/prebuilt/bin/clearcache:system/bin/clearcache \
-						vendor/openeclair/prebuilt/bin/compcache:system/bin/compcache \
+						vendor/openeclair/prebuilt/bin/memctl:system/bin/memctl \
 						vendor/openeclair/prebuilt/bin/firstboot:system/bin/firstboot \
 						vendor/openeclair/prebuilt/bin/fix_permissions:system/bin/fix_permissions \
 						vendor/openeclair/prebuilt/bin/rosystem:system/bin/rosystem \
