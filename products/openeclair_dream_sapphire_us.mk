@@ -17,6 +17,7 @@
 # This is the top-level configuration for a US-configured openeclairMod build
 
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
+#$(call inherit-product, vendor/aosp/products/aosp_sapphire_us.mk)
 
 USE_CAMERA_STUB := false
 
