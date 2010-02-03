@@ -23,12 +23,6 @@ then
 			elif ( echo $line | grep 'package name=\"com.android.providers.im\"' > /dev/null );
 			then
 				IN_PACKAGES=1;
-			elif ( echo $line | grep 'package name=\"com.htc.android.teeter' > /dev/null );
-			then
-				IN_PACKAGES=1;
-			elif ( echo $line | grep 'package name=\"com.google.android.apps.maps' > /dev/null );
-			then
-				IN_PACKAGES=1;
 			elif ( echo $line | grep 'package name=\"android.tether' > /dev/null );
 			then
 				IN_PACKAGES=1;
