@@ -21,9 +21,22 @@ $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 
 USE_CAMERA_STUB := false
 
-# Build the JIT, but disable it for right now because of stability issues
-WITH_JIT := true
-PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.execution-mode=int:fast
+# Build WebKit with V8
+JS_ENGINE=v8
+
+# Used by BusyBox
+KERNEL_MODULES_DIR:=/system/lib/modules
+
+# Try to auto-vectorize since we are on a NEON-capable device
+TARGET_arm_CFLAGS += \
+    -mvectorize-with-neon-quad \
+    -ftree-vectorize \
+    -ffast-math
+
+TARGET_thumb_CFLAGS += \
+    -mvectorize-with-neon-quad \
+    -ftree-vectorize \
+    -ffast-math
 
 PRODUCT_NAME := openeclair_dream_sapphire_us
 
@@ -52,8 +65,8 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/build.prop:system/build.prop \
 						vendor/openeclair/prebuilt/bin/rwsystem:system/bin/rwsystem \
 						vendor/openeclair/prebuilt/bin/shutdown:system/bin/shutdown \
 						vendor/openeclair/prebuilt/bin/usb-tether:system/bin/usb-tether \
-						vendor/openeclair/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
-						vendor/openeclair/prebuilt/etc/dnsmasq.conf:system/etc/dnsmasq.conf \
+						vendor/cyanogen/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
+						vendor/cyanogen/prebuilt/etc/dnsmasq.conf:system/etc/dnsmasq.conf \
 						vendor/openeclair/prebuilt/etc/fstab:system/etc/fstab \
 						vendor/openeclair/prebuilt/etc/init.d:system/etc/init.d \
 						vendor/openeclair/prebuilt/etc/permissions:system/etc/permissions \
@@ -75,60 +88,60 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/build.prop:system/build.prop \
 
 PRODUCT_LOCALES := \
     en_US \
-	ar_EG \
-	ar_IL \
-	bg_BG \
-	ca_ES \
-	cs_CZ \
-	da_DK \
-	de_AT \
-	de_CH \
-	de_DE \
-	de_LI \
-	el_GR \
-	en_AU \
-	en_CA \
-	en_GB \
-	en_IE \
-	en_IN \
-	en_NZ \
-	en_SG \
-	en_ZA \
-	es_ES \
-	es_US \
-	fi_FI \
-	fr_BE \
-	fr_CA \
-	fr_CH \
-	fr_FR \
-	he_IL \
-	hi_IN \
-	hr_HR \
-	hu_HU \
-	id_ID \
-	it_CH \
-	it_IT \
-	iw_IL \
-	ja_JP \
-	ko_KR \
-	lt_LT \
-	lv_LV \
-	nb_NO \
-	nl_BE \
-	nl_NL \
-	pl_PL \
-	pt_BR \
-	pt_PT \
-	ro_RO \
-	ru_RU \
-	sk_SK \
-	sl_SI \
-	sr_RS \
-	sv_SE \
-	th_TH \
-	tl_PH \
-	tr_TR \
-	uk_UA \
-	vi_VN \
-	zh_CN \
-	zh_TW
+    ar_EG \
+    ar_IL \
+    bg_BG \
+    ca_ES \
+    cs_CZ \
+    da_DK \
+    de_AT \
+    de_CH \
+    de_DE \
+    de_LI \
+    el_GR \
+    en_AU \
+    en_CA \
+    en_GB \
+    en_IE \
+    en_IN \
+    en_NZ \
+    en_SG \
+    en_ZA \
+    es_ES \
+    es_US \
+    fi_FI \
+    fr_BE \
+    fr_CA \
+    fr_CH \
+    fr_FR \
+    he_IL \
+    hi_IN \
+    hr_HR \
+    hu_HU \
+    id_ID \
+    it_CH \
+    it_IT \
+    iw_IL \
+    ja_JP \
+    ko_KR \
+    lt_LT \
+    lv_LV \
+    nb_NO \
+    nl_BE \
+    nl_NL \
+    pl_PL \
+    pt_BR \
+    pt_PT \
+    ro_RO \
+    ru_RU \
+    sk_SK \
+    sl_SI \
+    sr_RS \
+    sv_SE \
+    th_TH \
+    tl_PH \
+    tr_TR \
+    uk_UA \
+    vi_VN \
+    zh_CN \
+    zh_TW \
