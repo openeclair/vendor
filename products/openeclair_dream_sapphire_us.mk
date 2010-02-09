@@ -19,6 +19,17 @@
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 #$(call inherit-product, vendor/aosp/products/aosp_sapphire_us.mk)
 
+ADDITIONAL_BUILD_PROPERTIES += ro.com.google.locationfeatures=1
+ADDITIONAL_BUILD_PROPERTIES += ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html
+ADDITIONAL_BUILD_PROPERTIES += ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/android-dev-phone-privacy.html
+ADDITIONAL_BUILD_PROPERTIES += keyguard.no_require_sim=true
+ADDITIONAL_BUILD_PROPERTIES += ro.com.android.dateformat=MM-dd-yyyy
+ADDITIONAL_BUILD_PROPERTIES += ro.com.android.dataroaming=true
+ADDITIONAL_BUILD_PROPERTIES += ro.ril.hsxpa=1
+ADDITIONAL_BUILD_PROPERTIES += ro.ril.gprsclass=10
+ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
+ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.execution-mode=int:fast
+
 USE_CAMERA_STUB := false
 
 # Build WebKit with V8
@@ -53,10 +64,9 @@ PRODUCT_PACKAGES += Superuser \
 
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/build.prop:system/build.prop \
-						vendor/openeclair/prebuilt/build.sapphire.prop:system/build.sapphire.prop \
-						vendor/openeclair/prebuilt/build.trout.prop:system/build.trout.prop \
-						vendor/openeclair/prebuilt/bin/appfix:system/bin/appfix \
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/hookerface:data/hookerface
+
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/appfix:system/bin/appfix \
 						vendor/openeclair/prebuilt/bin/clearcache:system/bin/clearcache \
 						vendor/openeclair/prebuilt/bin/memctl:system/bin/memctl \
 						vendor/openeclair/prebuilt/bin/firstboot:system/bin/firstboot \
