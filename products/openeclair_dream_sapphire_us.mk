@@ -18,6 +18,9 @@
 
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 
+# Custom Kernel
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../zImage
+
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.locationfeatures=1
 ADDITIONAL_BUILD_PROPERTIES += ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html
 ADDITIONAL_BUILD_PROPERTIES += ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/android-dev-phone-privacy.html
@@ -29,6 +32,8 @@ ADDITIONAL_BUILD_PROPERTIES += ro.ril.gprsclass=10
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
 ADDITIONAL_BUILD_PROPERTIES += ro.build.description=passion-user 2.1 ERD72 22132 release-keys
 ADDITIONAL_BUILD_PROPERTIES += ro.build.fingerprint=google/passion/passion/mahimahi:2.1/ERD72/22132:user/release-keys
+
+ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.1.6
 
 USE_CAMERA_STUB := false
 
@@ -100,6 +105,17 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.maps.jar:
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.datamessaging.xml:system/etc/permissions/com.google.android.datamessaging.xml
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.gtalkservice.xml:system/etc/permissions/com.google.android.gtalkservice.xml
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml
+
+# Custom build props
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/build.sapphire.prop:system/build.sapphire.prop
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/build.trout.prop:system/build.trout.prop
+
+# Compcache
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/compcache/ramzswap.ko:system/modules/lib/modules/2.6.29.6-wg/compcache/ramzswap.ko
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/compcache/rzscontrol:system/bin/rzscontrol
+
+# Wireless Driver
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/wlan.ko:system/lib/modules/wlan.ko
 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/memctl:system/bin/memctl \
 						vendor/openeclair/prebuilt/bin/firstboot:system/bin/firstboot \
