@@ -24,10 +24,11 @@ ADDITIONAL_BUILD_PROPERTIES += ro.url.legal.android_privacy=http://www.google.co
 ADDITIONAL_BUILD_PROPERTIES += keyguard.no_require_sim=true
 ADDITIONAL_BUILD_PROPERTIES += ro.com.android.dateformat=MM-dd-yyyy
 ADDITIONAL_BUILD_PROPERTIES += ro.com.android.dataroaming=true
-ADDITIONAL_BUILD_PROPERTIES += ro.ril.hsxpa=1
+ADDITIONAL_BUILD_PROPERTIES += ro.ril.hsxpa=2
 ADDITIONAL_BUILD_PROPERTIES += ro.ril.gprsclass=10
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
-ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.execution-mode=int:fast
+ADDITIONAL_BUILD_PROPERTIES += ro.build.description=passion-user 2.1 ERD72 22132 release-keys
+ADDITIONAL_BUILD_PROPERTIES += ro.build.fingerprint=google/passion/passion/mahimahi:2.1/ERD72/22132:user/release-keys
 
 USE_CAMERA_STUB := false
 
