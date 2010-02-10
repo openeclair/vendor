@@ -17,7 +17,6 @@
 # This is the top-level configuration for a US-configured openeclairMod build
 
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
-#$(call inherit-product, vendor/aosp/products/aosp_sapphire_us.mk)
 
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.locationfeatures=1
 ADDITIONAL_BUILD_PROPERTIES += ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html
@@ -64,11 +63,11 @@ PRODUCT_PACKAGES += Superuser \
 
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
-# PRODUCT_COPY_FILES += vendor/openeclair/proprietary/hookerface:data/hookerface
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Vending.apk:data/app_s_tmp/Vending.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/VoiceSearchWithKeyboard.apk:data/app_s_tmp/VoiceSearchWithKeyboard.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:data/app_s_tmp/Maps.apk
 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/appfix:system/bin/appfix \
-						vendor/openeclair/prebuilt/bin/clearcache:system/bin/clearcache \
-						vendor/openeclair/prebuilt/bin/memctl:system/bin/memctl \
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/memctl:system/bin/memctl \
 						vendor/openeclair/prebuilt/bin/firstboot:system/bin/firstboot \
 						vendor/openeclair/prebuilt/bin/fix_permissions:system/bin/fix_permissions \
 						vendor/openeclair/prebuilt/bin/rosystem:system/bin/rosystem \
