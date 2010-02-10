@@ -28,7 +28,6 @@ ADDITIONAL_BUILD_PROPERTIES += ro.com.android.dataroaming=true
 ADDITIONAL_BUILD_PROPERTIES += ro.ril.hsxpa=2
 ADDITIONAL_BUILD_PROPERTIES += ro.ril.gprsclass=10
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
-ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.execution-mode=int:fast
 
 USE_CAMERA_STUB := false
 
