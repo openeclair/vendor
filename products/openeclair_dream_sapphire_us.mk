@@ -64,7 +64,7 @@ PRODUCT_PACKAGES += Superuser \
 
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/hookerface:data/hookerface
+# PRODUCT_COPY_FILES += vendor/openeclair/proprietary/hookerface:data/hookerface
 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/appfix:system/bin/appfix \
 						vendor/openeclair/prebuilt/bin/clearcache:system/bin/clearcache \
