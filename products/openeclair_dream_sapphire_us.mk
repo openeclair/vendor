@@ -61,7 +61,6 @@ PRODUCT_PACKAGES += Superuser \
 	Bluetooth \
 	CertInstaller \
 	DeskClock \
-	Gallery3D \
 	android.software.live_wallpaper.xml \
 	LiveWallpapersPicker \
 	MagicSmokeWallpapers \
@@ -72,8 +71,8 @@ PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 # APKs
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Vending.apk:data/app_s_tmp/Vending.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/VoiceSearchWithKeyboard.apk:data/app_s_tmp/VoiceSearchWithKeyboard.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:data/app/Maps.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Street.apk:data/app/Street.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:data/app_s_tmp/Maps.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Street.apk:data/app_s_tmp/Street.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/YouTube.apk:data/app/YouTube.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GenieWidget.apk:data/app/GenieWidget.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Facebook.apk:data/app/Facebook.apk
@@ -98,6 +97,9 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/TalkProvider.apk:system/app/
 # Libraries
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libspeech.so:system/lib/libspeech.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/camera/libcameraservice.so:system/lib/libcameraservice.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/camera/libcamera.so:system/lib/libcamera.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/camera/libqcamera.so:system/lib/libqcamera.so
 
 # Permissions & Framework
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.gtalkservice.jar:system/framework/com.google.android.gtalkservice.jar
@@ -117,7 +119,11 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/compcache/rzscontrol:system/bin
 # Wireless Driver
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/wlan.ko:system/lib/modules/wlan.ko
 
+# SD Card
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/blank:system/sd/placeholder
+
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/memctl:system/bin/memctl \
+						vendor/openeclair/prebuilt/bin/e2fsck:system/xbin/e2fsck \
 						vendor/openeclair/prebuilt/bin/firstboot:system/bin/firstboot \
 						vendor/openeclair/prebuilt/bin/fix_permissions:system/bin/fix_permissions \
 						vendor/openeclair/prebuilt/bin/rosystem:system/bin/rosystem \
