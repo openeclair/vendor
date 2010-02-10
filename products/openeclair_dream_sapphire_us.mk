@@ -72,10 +72,10 @@ PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 # APKs
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Vending.apk:data/app_s_tmp/Vending.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/VoiceSearchWithKeyboard.apk:data/app_s_tmp/VoiceSearchWithKeyboard.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:data/app_s_tmp/Maps.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Street.apk:data/app_s_tmp/Street.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/YouTube.apk:data/app_s_tmp/YouTube.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GenieWidget.apk:data/app_s_tmp/GenieWidget.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:data/app/Maps.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Street.apk:data/app/Street.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/YouTube.apk:data/app/YouTube.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GenieWidget.apk:data/app/GenieWidget.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Facebook.apk:data/app/Facebook.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/EnhancedGoogleSearchProvider.apk:system/app/EnhancedGoogleSearchProvider.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Gmail.apk:system/app/Gmail.apk
