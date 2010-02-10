@@ -30,3 +30,7 @@ for sysapp in /data/app_s/* ; do
 	echo "$sysapp Symlinked to data partition";
 done;
 
+echo "--- Running autozipalign.";
+        if [ -e /system/bin/autozipalign ]; then
+            /system/bin/sh /system/bin/autozipalign;
+        fi;
