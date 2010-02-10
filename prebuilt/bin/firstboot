@@ -12,23 +12,6 @@
     fi;
 }
 
-#echo "--- Clearing Cache";
-#    if [ -e /system/bin/clearcache ]; then
-#	/system/bin/sh /system/bin/clearcache;
-#   fi;
-
-
-#echo "--- Symlinking System Dalvik-Cache to Data Partition";
-#for sysfile in /data/system-cache/*.dex ; do
-#	if [ -e /data/dalvik-cache/$(basename $sysfile) ]; then
-#		busybox rm /data/dalvik-cache/$(basename $sysfile); > /dev/null
-#	fi;
-#	if [ -h /data/dalvik-cache/$(basename $sysfile) ]; then
-#		busybox rm /data/dalvik-cache/$(basename $sysfile); > /dev/null
-#	fi;
-#	busybox ln -s $sysfile /data/dalvik-cache/$(basename $sysfile);
-#done;
-
 echo "--- Symlinking Media Folder";
 	busybox rm -r /data/.media;  > /dev/null
 	busybox ln -s /data/media /system/media;
@@ -46,10 +29,4 @@ for sysapp in /data/app_s/* ; do
 	busybox ln -s $sysapp /system/app/$(basename $sysapp);
 	echo "$sysapp Symlinked to data partition";
 done;
-
-echo "--- Running System App/Framework Fix - This will take a while";
-    if [ -e /system/bin/appfix ]; then
-	/system/bin/sh /system/bin/appfix;
-    fi;
-
 
