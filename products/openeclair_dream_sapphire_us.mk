@@ -63,8 +63,11 @@ PRODUCT_PACKAGES += Superuser \
 	DeskClock \
 	android.software.live_wallpaper.xml \
 	LiveWallpapersPicker \
+	LiveWallpapers \
 	MagicSmokeWallpapers \
-	VisualizationWallpapers
+	VisualizationWallpapers \
+	libRS \
+	librs_jni
 
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
