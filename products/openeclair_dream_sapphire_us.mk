@@ -38,7 +38,7 @@ ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.1.6
 USE_CAMERA_STUB := false
 
 # Build WebKit with V8
-JS_ENGINE=v8
+JS_ENGINE=jsc
 
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
@@ -103,6 +103,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libspeech.so:system/lib/libs
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/camera/libcameraservice.so:system/lib/libcameraservice.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/camera/libcamera.so:system/lib/libcamera.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/camera/libqcamera.so:system/lib/libqcamera.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/sapphire-keypad.kcm.bin:system/etc/keychars/sapphire-keypad.kcm.bin
 
 # Permissions & Framework
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.gtalkservice.jar:system/framework/com.google.android.gtalkservice.jar
@@ -212,4 +213,4 @@ PRODUCT_LOCALES := \
     uk_UA \
     vi_VN \
     zh_CN \
-    zh_TW \
+    zh_TW
