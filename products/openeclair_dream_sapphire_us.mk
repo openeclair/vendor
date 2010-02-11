@@ -136,7 +136,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/memctl:system/bin/memctl \
 						vendor/openeclair/prebuilt/bin/rwsystem:system/bin/rwsystem \
 						vendor/openeclair/prebuilt/bin/shutdown:system/bin/shutdown \
 						vendor/openeclair/prebuilt/bin/usb-tether:system/bin/usb-tether \
-						vendor/cyanogen/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
+						vendor/openeclair/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
 						vendor/cyanogen/prebuilt/etc/dnsmasq.conf:system/etc/dnsmasq.conf \
 						vendor/openeclair/prebuilt/etc/fstab:system/etc/fstab \
 						vendor/openeclair/prebuilt/etc/init.d:system/etc/init.d \
