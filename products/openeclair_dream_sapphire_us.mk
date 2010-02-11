@@ -33,7 +33,7 @@ ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
 ADDITIONAL_BUILD_PROPERTIES += ro.build.description=passion-user 2.1 ERD72 22132 release-keys
 ADDITIONAL_BUILD_PROPERTIES += ro.build.fingerprint=google/passion/passion/mahimahi:2.1/ERD72/22132:user/release-keys
 
-ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.1.6
+ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.2.0
 
 USE_CAMERA_STUB := false
 
@@ -67,7 +67,8 @@ PRODUCT_PACKAGES += Superuser \
 	MagicSmokeWallpapers \
 	VisualizationWallpapers \
 	libRS \
-	librs_jni
+	librs_jni \
+        Launcher2
 
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
