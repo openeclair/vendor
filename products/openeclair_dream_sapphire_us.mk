@@ -30,8 +30,6 @@ ADDITIONAL_BUILD_PROPERTIES += ro.com.android.dataroaming=true
 ADDITIONAL_BUILD_PROPERTIES += ro.ril.hsxpa=2
 ADDITIONAL_BUILD_PROPERTIES += ro.ril.gprsclass=10
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
-ADDITIONAL_BUILD_PROPERTIES += ro.build.description=passion-user 2.1 ERD72 22132 release-keys
-ADDITIONAL_BUILD_PROPERTIES += ro.build.fingerprint=google/passion/passion/mahimahi:2.1/ERD72/22132:user/release-keys
 
 ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.2.0
 
