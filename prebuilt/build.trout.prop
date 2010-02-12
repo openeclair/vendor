@@ -10,3 +10,6 @@ ro.product.locale.region=US
 ro.board.platform=msm7k
 # ro.build.product is obsolete; use ro.product.device
 ro.build.product=dream
+ro.build.description=passion-user 2.1 ERD72 22132 release-keys
+ro.build.fingerprint=google/passion/passion/mahimahi:2.1/ERD72/22132:user/release-keys
+

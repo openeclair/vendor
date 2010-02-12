@@ -17,7 +17,9 @@
 # This is the top-level configuration for a US-configured openeclairMod build
 
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
-#$(call inherit-product, vendor/aosp/products/aosp_sapphire_us.mk)
+
+# Custom Kernel
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/zImage
 
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.locationfeatures=1
 ADDITIONAL_BUILD_PROPERTIES += ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html
@@ -28,13 +30,13 @@ ADDITIONAL_BUILD_PROPERTIES += ro.com.android.dataroaming=true
 ADDITIONAL_BUILD_PROPERTIES += ro.ril.hsxpa=2
 ADDITIONAL_BUILD_PROPERTIES += ro.ril.gprsclass=10
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
-ADDITIONAL_BUILD_PROPERTIES += ro.build.description=passion-user 2.1 ERD72 22132 release-keys
-ADDITIONAL_BUILD_PROPERTIES += ro.build.fingerprint=google/passion/passion/mahimahi:2.1/ERD72/22132:user/release-keys
+
+ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.2.0
 
 USE_CAMERA_STUB := false
 
 # Build WebKit with V8
-JS_ENGINE=v8
+JS_ENGINE=jsc
 
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
@@ -57,26 +59,81 @@ PRODUCT_PACKAGES += Superuser \
 	Bluetooth \
 	CertInstaller \
 	DeskClock \
-	Gallery3D \
 	android.software.live_wallpaper.xml \
 	LiveWallpapersPicker \
+	LiveWallpapers \
 	MagicSmokeWallpapers \
-	VisualizationWallpapers
+	VisualizationWallpapers \
+	libRS \
+	librs_jni 
 
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
-# PRODUCT_COPY_FILES += vendor/openeclair/proprietary/hookerface:data/hookerface
+# APKs
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Vending.apk:data/app_s_tmp/Vending.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/VoiceSearchWithKeyboard.apk:data/app_s_tmp/VoiceSearchWithKeyboard.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:data/app_s_tmp/Maps.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Street.apk:data/app_s_tmp/Street.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/YouTube.apk:data/app/YouTube.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GenieWidget.apk:data/app/GenieWidget.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Facebook.apk:data/app/Facebook.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/EnhancedGoogleSearchProvider.apk:system/app/EnhancedGoogleSearchProvider.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Gmail.apk:system/app/Gmail.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GmailProvider.apk:system/app/GmailProvider.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleApps.apk:system/app/GoogleApps.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleCheckin.apk:system/app/GoogleCheckin.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleSettingsProvider.apk:system/app/GoogleSettingsProvider.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleSubscribedFeedsProvider.apk:system/app/GoogleSubscribedFeedsProvider.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/gtalkservice.apk:system/app/gtalkservice.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/MarketUpdater.apk:system/app/MarketUpdater.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/MediaUploader.apk:system/app/MediaUploader.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/NetworkLocation.apk:system/app/NetworkLocation.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/SetupWizard.apk:system/app/SetupWizard.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Talk.apk:system/app/Talk.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/TalkProvider.apk:system/app/TalkProvider.apk
 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/appfix:system/bin/appfix \
-						vendor/openeclair/prebuilt/bin/clearcache:system/bin/clearcache \
-						vendor/openeclair/prebuilt/bin/memctl:system/bin/memctl \
+# Libraries
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libspeech.so:system/lib/libspeech.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/camera/libcameraservice.so:system/lib/libcameraservice.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/camera/libcamera.so:system/lib/libcamera.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/camera/libqcamera.so:system/lib/libqcamera.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/sapphire-keypad.kcm.bin:system/etc/keychars/sapphire-keypad.kcm.bin
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/sensors.sapphire.so:system/lib/hw/sensors.sapphire.so
+
+# Permissions & Framework
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.gtalkservice.jar:system/framework/com.google.android.gtalkservice.jar
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.datamessaging.xml:system/etc/permissions/com.google.android.datamessaging.xml
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.gtalkservice.xml:system/etc/permissions/com.google.android.gtalkservice.xml
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml
+
+# Custom build props
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/build.sapphire.prop:system/build.sapphire.prop
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/build.trout.prop:system/build.trout.prop
+
+# Compcache
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/compcache/ramzswap.ko:system/modules/lib/modules/2.6.29.6-wg/compcache/ramzswap.ko
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/compcache/rzscontrol:system/bin/rzscontrol
+
+# Wireless Driver
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/wlan.ko:system/lib/modules/wlan.ko
+
+# SD Card
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/blank:system/sd/placeholder
+
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/memctl:system/bin/memctl \
+						vendor/openeclair/prebuilt/bin/e2fsck:system/xbin/e2fsck \
 						vendor/openeclair/prebuilt/bin/firstboot:system/bin/firstboot \
 						vendor/openeclair/prebuilt/bin/fix_permissions:system/bin/fix_permissions \
 						vendor/openeclair/prebuilt/bin/rosystem:system/bin/rosystem \
 						vendor/openeclair/prebuilt/bin/rwsystem:system/bin/rwsystem \
 						vendor/openeclair/prebuilt/bin/shutdown:system/bin/shutdown \
 						vendor/openeclair/prebuilt/bin/usb-tether:system/bin/usb-tether \
-						vendor/cyanogen/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
+						vendor/openeclair/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
 						vendor/cyanogen/prebuilt/etc/dnsmasq.conf:system/etc/dnsmasq.conf \
 						vendor/openeclair/prebuilt/etc/fstab:system/etc/fstab \
 						vendor/openeclair/prebuilt/etc/init.d:system/etc/init.d \
@@ -155,4 +212,4 @@ PRODUCT_LOCALES := \
     uk_UA \
     vi_VN \
     zh_CN \
-    zh_TW \
+    zh_TW
