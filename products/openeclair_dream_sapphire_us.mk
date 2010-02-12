@@ -36,6 +36,8 @@ ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.2.0
 USE_CAMERA_STUB := false
 
 # Build WebKit with V8
+#JS_ENGINE=V8
+
 JS_ENGINE=jsc
 
 # Used by BusyBox
