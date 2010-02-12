@@ -68,7 +68,8 @@ PRODUCT_PACKAGES += Superuser \
 	VisualizationWallpapers \
 	libRS \
 	librs_jni \
-        Launcher2
+        Launcher2 \
+        Launcher
 
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
