@@ -67,9 +67,7 @@ PRODUCT_PACKAGES += Superuser \
 	MagicSmokeWallpapers \
 	VisualizationWallpapers \
 	libRS \
-	librs_jni \
-        Launcher2 \
-        Launcher
+	librs_jni 
 
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
