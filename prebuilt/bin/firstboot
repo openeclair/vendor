@@ -34,3 +34,16 @@ echo "--- Running autozipalign.";
         if [ -e /system/bin/autozipalign ]; then
             /system/bin/sh /system/bin/autozipalign;
         fi;
+
+echo "--- Setting permissions so wifi doesn't crap out";
+mkdir /data/misc/wifi
+chmod 0770 /data/misc/wifi;
+chown wifi.wifi /data/misc/wifi;
+chmod 0660 /data/misc/wifi/wpa_supplicant.conf;
+chown wifi.wifi /data/misc/wifi/wpa_supplicant.conf;
+mkdir /data/misc/wifi/sockets;
+chown wifi.wifi /data/misc/wifi/sockets;
+chmod 0770 /data/misc/wifi/sockets;
+mkdir /data/misc/dhcp;
+chown dhcp.dhcp /data/misc/dhcp;
+chmod 0770 /data/misc/dhcp;
