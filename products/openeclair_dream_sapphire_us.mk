@@ -105,6 +105,8 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/camera/libcamera.so:system/lib/
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/camera/libqcamera.so:system/lib/libqcamera.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/sapphire-keypad.kcm.bin:system/etc/keychars/sapphire-keypad.kcm.bin
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/sensors.sapphire.so:system/lib/hw/sensors.sapphire.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/libext2fs.so:system/lib/libext2fs.so
+
 
 # Permissions & Framework
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.gtalkservice.jar:system/framework/com.google.android.gtalkservice.jar
