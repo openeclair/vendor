@@ -1,13 +1,13 @@
 for prebuilt in * ; do
- 	echo vendor/openeclair/prebuilt/$prebuilt\:system/$prebuilt  \\;
+ 	echo PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/$prebuilt\:system/$prebuilt;
 done;
 for prebuilt in */* ; do
- 	echo vendor/openeclair/prebuilt/$prebuilt\:system/$prebuilt  \\;
+ 	echo PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/$prebuilt\:system/$prebuilt;
 done;
 for prebuilt in */*/* ; do
- 	echo vendor/openeclair/prebuilt/$prebuilt\:system/$prebuilt  \\;
+ 	echo PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/$prebuilt\:system/$prebuilt;
 done;
 for prebuilt in */*/*/* ; do
- 	echo vendor/openeclair/prebuilt/$prebuilt\:system/$prebuilt  \\;
+ 	echo PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/$prebuilt\:system/$prebuilt;
 done;
 

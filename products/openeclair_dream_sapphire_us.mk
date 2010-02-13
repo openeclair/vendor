@@ -134,8 +134,9 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/memctl:system/bin/memctl
 # Wireless Driver
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/wlan.ko:system/lib/modules/wlan.ko
 
-# SD Card
+# Placeholders
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/blank:system/sd/placeholder
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/blank:system/xbin/bb/placeholder
 
 # Scripts & Binaries
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/e2fsck:system/xbin/e2fsck 
@@ -165,136 +166,136 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/init.d/99complete:system/et
 
 # Extra Audio Notifications and Ringtones
 include frameworks/base/data/sounds/AudioPackage4.mk
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Alpha.mp3:system/media/audio/notifications/Alpha.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Ascend.mp3:system/media/audio/notifications/Ascend.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Bubble.mp3:system/media/audio/notifications/Bubble.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Chiff.mp3:system/media/audio/notifications/Chiff.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Color.mp3:system/media/audio/notifications/Color.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Confirm.mp3:system/media/audio/notifications/Confirm.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Dream.mp3:system/media/audio/notifications/Dream.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Dribble.mp3:system/media/audio/notifications/Dribble.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/F1_New_SMS.ogg:system/media/audio/notifications/F1_New_SMS.ogg \
-vendor/openeclair/prebuilt/media/audio/notifications/Freeze.mp3:system/media/audio/notifications/Freeze.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Friendly.mp3:system/media/audio/notifications/Friendly.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Guitar_1.mp3:system/media/audio/notifications/Guitar_1.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Guitar_2.mp3:system/media/audio/notifications/Guitar_2.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/ICQ.mp3:system/media/audio/notifications/ICQ.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Little.mp3:system/media/audio/notifications/Little.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Major.mp3:system/media/audio/notifications/Major.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Modern.mp3:system/media/audio/notifications/Modern.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/moonbeam.ogg:system/media/audio/notifications/moonbeam.ogg \
-vendor/openeclair/prebuilt/media/audio/notifications/Pebbles.mp3:system/media/audio/notifications/Pebbles.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/pizzicato.ogg:system/media/audio/notifications/pizzicato.ogg \
-vendor/openeclair/prebuilt/media/audio/notifications/Ripple.mp3:system/media/audio/notifications/Ripple.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Simple_High.mp3:system/media/audio/notifications/Simple_High.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Simple_Low.mp3:system/media/audio/notifications/Simple_Low.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Soft.mp3:system/media/audio/notifications/Soft.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/SpaceSeed.ogg:system/media/audio/notifications/SpaceSeed.ogg \
-vendor/openeclair/prebuilt/media/audio/notifications/Spacious.mp3:system/media/audio/notifications/Spacious.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Subtle.mp3:system/media/audio/notifications/Subtle.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Teleport.mp3:system/media/audio/notifications/Teleport.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/tweeters.ogg:system/media/audio/notifications/tweeters.ogg \
-vendor/openeclair/prebuilt/media/audio/notifications/Vector.mp3:system/media/audio/notifications/Vector.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Weight.mp3:system/media/audio/notifications/Weight.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Woodblock.mp3:system/media/audio/notifications/Woodblock.mp3 \
-vendor/openeclair/prebuilt/media/audio/notifications/Zing.mp3:system/media/audio/notifications/Zing.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/2_Step.mp3:system/media/audio/ringtones/2_Step.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Alpha.mp3:system/media/audio/ringtones/Alpha.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Aqua.mp3:system/media/audio/ringtones/Aqua.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Around.mp3:system/media/audio/ringtones/Around.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Backroad.ogg:system/media/audio/ringtones/Backroad.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/BeatPlucker.mp3:system/media/audio/ringtones/BeatPlucker.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/BentleyDubs.mp3:system/media/audio/ringtones/BentleyDubs.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Big_Easy.ogg:system/media/audio/ringtones/Big_Easy.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/BirdLoop.ogg:system/media/audio/ringtones/BirdLoop.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Blippy.mp3:system/media/audio/ringtones/Blippy.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Bollywood.ogg:system/media/audio/ringtones/Bollywood.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/BussaMove.ogg:system/media/audio/ringtones/BussaMove.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Cairo.ogg:system/media/audio/ringtones/Cairo.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Calypso_Steel.ogg:system/media/audio/ringtones/Calypso_Steel.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/CaribbeanIce.mp3:system/media/audio/ringtones/CaribbeanIce.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Champagne_Edition.ogg:system/media/audio/ringtones/Champagne_Edition.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Club_Cubano.ogg:system/media/audio/ringtones/Club_Cubano.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Cobblestone.mp3:system/media/audio/ringtones/Cobblestone.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/CrayonRock.ogg:system/media/audio/ringtones/CrayonRock.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/CrazyDream.mp3:system/media/audio/ringtones/CrazyDream.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/CurveBall.mp3:system/media/audio/ringtones/CurveBall.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Curve.mp3:system/media/audio/ringtones/Curve.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/DancinFool.ogg:system/media/audio/ringtones/DancinFool.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Ding.ogg:system/media/audio/ringtones/Ding.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/DonMessWivIt.ogg:system/media/audio/ringtones/DonMessWivIt.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/DreamTheme.mp3:system/media/audio/ringtones/DreamTheme.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/DreamTheme.ogg:system/media/audio/ringtones/DreamTheme.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Eastern_Sky.ogg:system/media/audio/ringtones/Eastern_Sky.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Enter_the_Nexus.ogg:system/media/audio/ringtones/Enter_the_Nexus.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/EtherShake.mp3:system/media/audio/ringtones/EtherShake.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Fire_Fly.mp3:system/media/audio/ringtones/Fire_Fly.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Friday.mp3:system/media/audio/ringtones/Friday.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/FriendlyGhost.mp3:system/media/audio/ringtones/FriendlyGhost.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Funk.mp3:system/media/audio/ringtones/Funk.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Funk_Yall.ogg:system/media/audio/ringtones/Funk_Yall.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/GameOverGuitar.mp3:system/media/audio/ringtones/GameOverGuitar.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Gimme_Mo_Town.ogg:system/media/audio/ringtones/Gimme_Mo_Town.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Glacial_Groove.ogg:system/media/audio/ringtones/Glacial_Groove.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Glass.mp3:system/media/audio/ringtones/Glass.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Growl.mp3:system/media/audio/ringtones/Growl.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/HalfwayHome.ogg:system/media/audio/ringtones/HalfwayHome.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Happy.mp3:system/media/audio/ringtones/Happy.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Heavy.mp3:system/media/audio/ringtones/Heavy.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Innovation.mp3:system/media/audio/ringtones/Innovation.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/InsertCoin.mp3:system/media/audio/ringtones/InsertCoin.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Jack.mp3:system/media/audio/ringtones/Jack.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/K.O..mp3:system/media/audio/ringtones/K.O..mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/LoopyLounge.mp3:system/media/audio/ringtones/LoopyLounge.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/LosAngeles2019.ogg:system/media/audio/ringtones/LosAngeles2019.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/LoveFlute.mp3:system/media/audio/ringtones/LoveFlute.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/MidEvilJaunt.mp3:system/media/audio/ringtones/MidEvilJaunt.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/MildlyAlarming.mp3:system/media/audio/ringtones/MildlyAlarming.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Nairobi.ogg:system/media/audio/ringtones/Nairobi.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Nassau.ogg:system/media/audio/ringtones/Nassau.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/NewPlayer.mp3:system/media/audio/ringtones/NewPlayer.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Noises1.mp3:system/media/audio/ringtones/Noises1.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Noises2.mp3:system/media/audio/ringtones/Noises2.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Noises3.mp3:system/media/audio/ringtones/Noises3.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/No_Limits.ogg:system/media/audio/ringtones/No_Limits.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Old_Phone.mp3:system/media/audio/ringtones/Old_Phone.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/OrganDub.mp3:system/media/audio/ringtones/OrganDub.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Paradise_Island.ogg:system/media/audio/ringtones/Paradise_Island.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Playa.ogg:system/media/audio/ringtones/Playa.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Potluck.mp3:system/media/audio/ringtones/Potluck.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Radiation.ogg:system/media/audio/ringtones/Radiation.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Red_Tea.mp3:system/media/audio/ringtones/Red_Tea.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Reset.mp3:system/media/audio/ringtones/Reset.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Rhino.mp3:system/media/audio/ringtones/Rhino.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Riffing.mp3:system/media/audio/ringtones/Riffing.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Ring_Classic_02.mp3:system/media/audio/ringtones/Ring_Classic_02.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Ring_Digital_02.mp3:system/media/audio/ringtones/Ring_Digital_02.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Ring_Synth_02.mp3:system/media/audio/ringtones/Ring_Synth_02.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Ring_Synth_04.mp3:system/media/audio/ringtones/Ring_Synth_04.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Road_Trip.ogg:system/media/audio/ringtones/Road_Trip.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/RomancingTheTone.mp3:system/media/audio/ringtones/RomancingTheTone.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Safari.ogg:system/media/audio/ringtones/Safari.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Sapphire.mp3:system/media/audio/ringtones/Sapphire.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Seville.ogg:system/media/audio/ringtones/Seville.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Shes_All_That.ogg:system/media/audio/ringtones/Shes_All_That.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Shocking.mp3:system/media/audio/ringtones/Shocking.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/SilkyWay.ogg:system/media/audio/ringtones/SilkyWay.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/SitarVsSitar.mp3:system/media/audio/ringtones/SitarVsSitar.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Solaris.mp3:system/media/audio/ringtones/Solaris.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/SpringyJalopy.mp3:system/media/audio/ringtones/SpringyJalopy.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Standard_1.mp3:system/media/audio/ringtones/Standard_1.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Standard_2.mp3:system/media/audio/ringtones/Standard_2.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Standard_3.mp3:system/media/audio/ringtones/Standard_3.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Standard_4.mp3:system/media/audio/ringtones/Standard_4.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Steppin_Out.ogg:system/media/audio/ringtones/Steppin_Out.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/Terminated.mp3:system/media/audio/ringtones/Terminated.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Third_Eye.ogg:system/media/audio/ringtones/Third_Eye.ogg \
-vendor/openeclair/prebuilt/media/audio/ringtones/T-Jingle.mp3:system/media/audio/ringtones/T-Jingle.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/TwirlAway.mp3:system/media/audio/ringtones/TwirlAway.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/VeryAlarmed.mp3:system/media/audio/ringtones/VeryAlarmed.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Whistler.mp3:system/media/audio/ringtones/Whistler.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/Windchimer.mp3:system/media/audio/ringtones/Windchimer.mp3 \
-vendor/openeclair/prebuilt/media/audio/ringtones/World.mp3:system/media/audio/ringtones/World.mp3	  
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Alpha.mp3:system/media/audio/notifications/Alpha.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Ascend.mp3:system/media/audio/notifications/Ascend.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Bubble.mp3:system/media/audio/notifications/Bubble.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Chiff.mp3:system/media/audio/notifications/Chiff.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Color.mp3:system/media/audio/notifications/Color.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Confirm.mp3:system/media/audio/notifications/Confirm.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Dream.mp3:system/media/audio/notifications/Dream.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Dribble.mp3:system/media/audio/notifications/Dribble.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/F1_New_SMS.ogg:system/media/audio/notifications/F1_New_SMS.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Freeze.mp3:system/media/audio/notifications/Freeze.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Friendly.mp3:system/media/audio/notifications/Friendly.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Guitar_1.mp3:system/media/audio/notifications/Guitar_1.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Guitar_2.mp3:system/media/audio/notifications/Guitar_2.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/ICQ.mp3:system/media/audio/notifications/ICQ.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Little.mp3:system/media/audio/notifications/Little.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Major.mp3:system/media/audio/notifications/Major.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Modern.mp3:system/media/audio/notifications/Modern.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/moonbeam.ogg:system/media/audio/notifications/moonbeam.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Pebbles.mp3:system/media/audio/notifications/Pebbles.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/pizzicato.ogg:system/media/audio/notifications/pizzicato.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Ripple.mp3:system/media/audio/notifications/Ripple.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Simple_High.mp3:system/media/audio/notifications/Simple_High.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Simple_Low.mp3:system/media/audio/notifications/Simple_Low.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Soft.mp3:system/media/audio/notifications/Soft.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/SpaceSeed.ogg:system/media/audio/notifications/SpaceSeed.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Spacious.mp3:system/media/audio/notifications/Spacious.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Subtle.mp3:system/media/audio/notifications/Subtle.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Teleport.mp3:system/media/audio/notifications/Teleport.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/tweeters.ogg:system/media/audio/notifications/tweeters.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Vector.mp3:system/media/audio/notifications/Vector.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Weight.mp3:system/media/audio/notifications/Weight.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Woodblock.mp3:system/media/audio/notifications/Woodblock.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Zing.mp3:system/media/audio/notifications/Zing.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/2_Step.mp3:system/media/audio/ringtones/2_Step.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Alpha.mp3:system/media/audio/ringtones/Alpha.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Aqua.mp3:system/media/audio/ringtones/Aqua.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Around.mp3:system/media/audio/ringtones/Around.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Backroad.ogg:system/media/audio/ringtones/Backroad.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/BeatPlucker.mp3:system/media/audio/ringtones/BeatPlucker.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/BentleyDubs.mp3:system/media/audio/ringtones/BentleyDubs.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Big_Easy.ogg:system/media/audio/ringtones/Big_Easy.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/BirdLoop.ogg:system/media/audio/ringtones/BirdLoop.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Blippy.mp3:system/media/audio/ringtones/Blippy.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Bollywood.ogg:system/media/audio/ringtones/Bollywood.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/BussaMove.ogg:system/media/audio/ringtones/BussaMove.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Cairo.ogg:system/media/audio/ringtones/Cairo.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Calypso_Steel.ogg:system/media/audio/ringtones/Calypso_Steel.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/CaribbeanIce.mp3:system/media/audio/ringtones/CaribbeanIce.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Champagne_Edition.ogg:system/media/audio/ringtones/Champagne_Edition.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Club_Cubano.ogg:system/media/audio/ringtones/Club_Cubano.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Cobblestone.mp3:system/media/audio/ringtones/Cobblestone.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/CrayonRock.ogg:system/media/audio/ringtones/CrayonRock.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/CrazyDream.mp3:system/media/audio/ringtones/CrazyDream.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/CurveBall.mp3:system/media/audio/ringtones/CurveBall.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Curve.mp3:system/media/audio/ringtones/Curve.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/DancinFool.ogg:system/media/audio/ringtones/DancinFool.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Ding.ogg:system/media/audio/ringtones/Ding.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/DonMessWivIt.ogg:system/media/audio/ringtones/DonMessWivIt.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/DreamTheme.mp3:system/media/audio/ringtones/DreamTheme.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/DreamTheme.ogg:system/media/audio/ringtones/DreamTheme.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Eastern_Sky.ogg:system/media/audio/ringtones/Eastern_Sky.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Enter_the_Nexus.ogg:system/media/audio/ringtones/Enter_the_Nexus.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/EtherShake.mp3:system/media/audio/ringtones/EtherShake.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Fire_Fly.mp3:system/media/audio/ringtones/Fire_Fly.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Friday.mp3:system/media/audio/ringtones/Friday.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/FriendlyGhost.mp3:system/media/audio/ringtones/FriendlyGhost.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Funk.mp3:system/media/audio/ringtones/Funk.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Funk_Yall.ogg:system/media/audio/ringtones/Funk_Yall.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/GameOverGuitar.mp3:system/media/audio/ringtones/GameOverGuitar.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Gimme_Mo_Town.ogg:system/media/audio/ringtones/Gimme_Mo_Town.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Glacial_Groove.ogg:system/media/audio/ringtones/Glacial_Groove.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Glass.mp3:system/media/audio/ringtones/Glass.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Growl.mp3:system/media/audio/ringtones/Growl.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/HalfwayHome.ogg:system/media/audio/ringtones/HalfwayHome.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Happy.mp3:system/media/audio/ringtones/Happy.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Heavy.mp3:system/media/audio/ringtones/Heavy.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Innovation.mp3:system/media/audio/ringtones/Innovation.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/InsertCoin.mp3:system/media/audio/ringtones/InsertCoin.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Jack.mp3:system/media/audio/ringtones/Jack.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/K.O..mp3:system/media/audio/ringtones/K.O..mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/LoopyLounge.mp3:system/media/audio/ringtones/LoopyLounge.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/LosAngeles2019.ogg:system/media/audio/ringtones/LosAngeles2019.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/LoveFlute.mp3:system/media/audio/ringtones/LoveFlute.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/MidEvilJaunt.mp3:system/media/audio/ringtones/MidEvilJaunt.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/MildlyAlarming.mp3:system/media/audio/ringtones/MildlyAlarming.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Nairobi.ogg:system/media/audio/ringtones/Nairobi.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Nassau.ogg:system/media/audio/ringtones/Nassau.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/NewPlayer.mp3:system/media/audio/ringtones/NewPlayer.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Noises1.mp3:system/media/audio/ringtones/Noises1.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Noises2.mp3:system/media/audio/ringtones/Noises2.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Noises3.mp3:system/media/audio/ringtones/Noises3.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/No_Limits.ogg:system/media/audio/ringtones/No_Limits.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Old_Phone.mp3:system/media/audio/ringtones/Old_Phone.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/OrganDub.mp3:system/media/audio/ringtones/OrganDub.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Paradise_Island.ogg:system/media/audio/ringtones/Paradise_Island.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Playa.ogg:system/media/audio/ringtones/Playa.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Potluck.mp3:system/media/audio/ringtones/Potluck.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Radiation.ogg:system/media/audio/ringtones/Radiation.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Red_Tea.mp3:system/media/audio/ringtones/Red_Tea.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Reset.mp3:system/media/audio/ringtones/Reset.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Rhino.mp3:system/media/audio/ringtones/Rhino.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Riffing.mp3:system/media/audio/ringtones/Riffing.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Ring_Classic_02.mp3:system/media/audio/ringtones/Ring_Classic_02.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Ring_Digital_02.mp3:system/media/audio/ringtones/Ring_Digital_02.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Ring_Synth_02.mp3:system/media/audio/ringtones/Ring_Synth_02.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Ring_Synth_04.mp3:system/media/audio/ringtones/Ring_Synth_04.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Road_Trip.ogg:system/media/audio/ringtones/Road_Trip.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/RomancingTheTone.mp3:system/media/audio/ringtones/RomancingTheTone.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Safari.ogg:system/media/audio/ringtones/Safari.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Sapphire.mp3:system/media/audio/ringtones/Sapphire.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Seville.ogg:system/media/audio/ringtones/Seville.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Shes_All_That.ogg:system/media/audio/ringtones/Shes_All_That.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Shocking.mp3:system/media/audio/ringtones/Shocking.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/SilkyWay.ogg:system/media/audio/ringtones/SilkyWay.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/SitarVsSitar.mp3:system/media/audio/ringtones/SitarVsSitar.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Solaris.mp3:system/media/audio/ringtones/Solaris.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/SpringyJalopy.mp3:system/media/audio/ringtones/SpringyJalopy.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Standard_1.mp3:system/media/audio/ringtones/Standard_1.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Standard_2.mp3:system/media/audio/ringtones/Standard_2.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Standard_3.mp3:system/media/audio/ringtones/Standard_3.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Standard_4.mp3:system/media/audio/ringtones/Standard_4.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Steppin_Out.ogg:system/media/audio/ringtones/Steppin_Out.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Terminated.mp3:system/media/audio/ringtones/Terminated.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Third_Eye.ogg:system/media/audio/ringtones/Third_Eye.ogg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/T-Jingle.mp3:system/media/audio/ringtones/T-Jingle.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/TwirlAway.mp3:system/media/audio/ringtones/TwirlAway.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/VeryAlarmed.mp3:system/media/audio/ringtones/VeryAlarmed.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Whistler.mp3:system/media/audio/ringtones/Whistler.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/Windchimer.mp3:system/media/audio/ringtones/Windchimer.mp3
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/ringtones/World.mp3:system/media/audio/ringtones/World.mp3
 
 PRODUCT_LOCALES := \
     en_US \
