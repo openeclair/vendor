@@ -75,6 +75,7 @@ PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/HTC_IME.apk:data/app_s_tmp/HTC_IME.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Clicker.apk:data/app_s_tmp/Clicker.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Vending.apk:data/app_s_tmp/Vending.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/wireless_tether_2_0-pre3_eclair.apk:data/app/wireless_tether_2_0-pre3_eclair.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/VoiceSearchWithKeyboard.apk:data/app_s_tmp/VoiceSearchWithKeyboard.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:data/app_s_tmp/Maps.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Street.apk:data/app_s_tmp/Street.apk
@@ -141,6 +142,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/blank:system/sd/placeholder
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/blank:system/xbin/bb/placeholder
 
 # Scripts and Binaries
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/appfix:system/xbin/appfix
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/e2fsck:system/xbin/e2fsck 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/firstboot:system/bin/firstboot 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/fix_permissions:system/bin/fix_permissions 

@@ -109,3 +109,6 @@ for sysapp in /data/app_s/* ; do
 	busybox ln -s $sysapp /system/app/$(basename $sysapp);
 	echo "$sysapp Symlinked to data partition";
 done;
+
+echo "--- Running AppFix - This will take a while";
+	/system/bin/sh /system/bin/appfix;
