@@ -72,6 +72,8 @@ PRODUCT_PACKAGES += Superuser \
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
 # APKs
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/HTC_IME.apk:data/app_s_tmp/HTC_IME.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Clicker.apk:data/app_s_tmp/Clicker.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Vending.apk:data/app_s_tmp/Vending.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/VoiceSearchWithKeyboard.apk:data/app_s_tmp/VoiceSearchWithKeyboard.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:data/app_s_tmp/Maps.apk
