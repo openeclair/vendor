@@ -111,19 +111,19 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/egl/egl.cfg:system/lib/egl/
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/egl/libGLES_qcom.so:system/lib/egl/libGLES_qcom.so 
 
 
-# Permissions & Framework
+# Permission and Framework
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.gtalkservice.jar:system/framework/com.google.android.gtalkservice.jar
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.datamessaging.xml:system/etc/permissions/com.google.android.datamessaging.xml
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.gtalkservice.xml:system/etc/permissions/com.google.android.gtalkservice.xml 
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/permissions/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/permissions/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/permissions/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/permissions/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml 
 
 # Custom build props
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/build.sapphire.prop:system/build.sapphire.prop
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/build.trout.prop:system/build.trout.prop \
-PRODUCT_COPY_FILES += vendor/openeclair/root/init.trout.rc:$(TARGET_ROOT_OUT)/root/init.trout.rc \
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/build.trout.prop:system/build.trout.prop 
+PRODUCT_COPY_FILES += vendor/openeclair/root/init.trout.rc:$(TARGET_ROOT_OUT)/root/init.trout.rc 
 PRODUCT_COPY_FILES += vendor/openeclair/root/init.sapphire.rc:$(TARGET_ROOT_OUT)/root/init.sapphire.rc
 
 # Compcache
@@ -138,7 +138,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/wlan.ko:system/lib/modules/wlan
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/blank:system/sd/placeholder
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/blank:system/xbin/bb/placeholder
 
-# Scripts & Binaries
+# Scripts and Binaries
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/e2fsck:system/xbin/e2fsck 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/firstboot:system/bin/firstboot 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/fix_permissions:system/bin/fix_permissions 
@@ -149,7 +149,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/bin/usb-tether:system/bin/usb-t
 
 # /system/etc files
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml 
-PRODUCT_COPY_FILES += vendor/cyanogen/prebuilt/etc/dnsmasq.conf:system/etc/dnsmasq.conf 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/dnsmasq.conf:system/etc/dnsmasq.conf 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/fstab:system/etc/fstab 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/sysctl.conf:system/etc/sysctl.conf 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/AudioPara4-trout.csv:system/etc/AudioPara4-trout.csv 
