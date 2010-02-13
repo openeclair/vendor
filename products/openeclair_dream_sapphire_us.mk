@@ -164,6 +164,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/init.d/05userinit:system/et
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/init.d/99complete:system/etc/init.d/99complete 
 
 # Extra Audio Notifications and Ringtones
+include frameworks/base/data/sounds/AudioPackage4.mk
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/media/audio/notifications/Alpha.mp3:system/media/audio/notifications/Alpha.mp3 \
 vendor/openeclair/prebuilt/media/audio/notifications/Ascend.mp3:system/media/audio/notifications/Ascend.mp3 \
 vendor/openeclair/prebuilt/media/audio/notifications/Bubble.mp3:system/media/audio/notifications/Bubble.mp3 \
