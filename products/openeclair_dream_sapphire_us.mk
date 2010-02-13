@@ -151,6 +151,8 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/apns-conf.xml:system/etc/ap
 PRODUCT_COPY_FILES += vendor/cyanogen/prebuilt/etc/dnsmasq.conf:system/etc/dnsmasq.conf 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/fstab:system/etc/fstab 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/sysctl.conf:system/etc/sysctl.conf 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/AudioPara4-trout.csv:system/etc/AudioPara4-trout.csv 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/AudioPara4-sapphire.csv:system/etc/AudioPara4-sapphire.csv
 
 # Boot init.d Files
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner 

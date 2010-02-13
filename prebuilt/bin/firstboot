@@ -83,6 +83,14 @@
 	
     fi;
 }
+{
+    CPUINFO=$(cat /proc/cpuinfo | busybox grep Hardware | busybox cut - -d ' ' -f 2,3);
+    if [ "${CPUINFO}" == "trout" ]; then
+	echo "---AudioPara4.csv for G1";
+	    mv /system/etc/AudioPara4-trout.csv /system/etc/AudioPara4.csv; > /dev/null
+	
+    fi;
+}
 
 echo "--- Symlinking Media Folder";
 	busybox rm -r /data/.media;  > /dev/null
