@@ -14,13 +14,16 @@
 # limitations under the License.
 #
 
-# This file is executed by build/envsetup.sh, and can use anything
-# defined in envsetup.sh.
-#
-# In particular, you can add lunch options with the add_lunch_combo
-# function: add_lunch_combo generic-eng
+# This is the top-level configuration for a US-configured CyanogenMod build
+$(call inherit-product, vendor/openeclair/products/openeclair_hdpi.mk)
+    
+PRODUCT_NAME := openeclair_sholes
+PRODUCT_MODEL := Droid
+PRODUCT_MANUFACTURER := Motorola
 
-add_lunch_combo openeclair_dream_sapphire_us-userdebug
-add_lunch_combo openeclair_dream_sapphire_us-eng
-add_lunch_combo openeclair_sholes-userdebug
-add_lunch_combo openeclair_sholes-eng
+# Which actual hardware this is based on (this is a path under vendor/)
+PRODUCT_BRAND := motorola
+PRODUCT_DEVICE := sholes-open
+PRODUCT_BUILD_FINGERPRINT_OVERRIDE := verizon/voles/sholes/sholes:2.0.1/ESD56/20996:user/release-keys
+
+include vendor/motorola/sholes-open/device_sholes.mk
