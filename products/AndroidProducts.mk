@@ -26,5 +26,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/openeclair_dream_sapphire_us.mk
+    $(LOCAL_DIR)/openeclair_dream_sapphire_us.mk \
     $(LOCAL_DIR)/openeclair_sholes.mk
