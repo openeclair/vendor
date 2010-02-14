@@ -357,4 +357,5 @@ PRODUCT_LOCALES := \
     uk_UA \
     vi_VN \
     zh_CN \
-    zh_TW
+    zh_TW \
+    hdpi
