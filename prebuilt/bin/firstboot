@@ -3,78 +3,6 @@
 # firstboot.sh
 # WesGarner for OpenEclair
 
-    # Create dump dir and collect dumps.
-    # Do this before we mount cache so eventually we can use cache for
-    # storing dumps on platforms which do not have a dedicated dump partition.
-   
-    mkdir /data/dontpanic
-    chown root log /data/dontpanic
-    chmod 0750 /data/dontpanic
-
-    # Collect apanic data, free resources and re-arm trigger
-    cp /proc/apanic_console /data/dontpanic/apanic_console
-    chown root log /data/dontpanic/apanic_console
-    chmod 0640 /data/dontpanic/apanic_console
-
-    cp /proc/apanic_threads /data/dontpanic/apanic_threads
-    chown root log /data/dontpanic/apanic_threads
-    chmod 0640 /data/dontpanic/apanic_threads
-
-    write /proc/apanic_console 1
-
-    # This may have been created by the recovery system with odd permissions
-    chown system system /cache/recovery
-    chmod 0770 /cache/recovery
-
-    #change permissions on vmallocinfo so we can grab it from bugreports
-    chown root log /proc/vmallocinfo
-    chmod 0440 /proc/vmallocinfo
-
-    # create basic filesystem structure
-    mkdir /data/misc 01771 system misc
-    mkdir /data/misc/bluetoothd 0770 bluetooth bluetooth
-    mkdir /data/misc/keystore 0700 keystore keystore
-    mkdir /data/misc/vpn 0770 system system
-    mkdir /data/misc/vpn/profiles 0770 system system
- 
-    # give system access to wpa_supplicant.conf for backup and restore
-    mkdir /data/misc/wifi
-    chmod 0770 /data/misc/wifi
-    chown wifi.wifi /data/misc/wifi
-    chmod 0660 /data/misc/wifi/wpa_supplicant.conf
-    chown wifi.wifi /data/misc/wifi/wpa_supplicant.conf
-    mkdir /data/misc/wifi/sockets
-    chown wifi.wifi /data/misc/wifi/sockets
-    chmod 0770 /data/misc/wifi/sockets
-    mkdir /data/misc/dhcp
-    chown dhcp.dhcp /data/misc/dhcp
-    chmod 0770 /data/misc/dhcp
-    mkdir /data/local 0771 shell shell
-    mkdir /data/local/tmp 0771 shell shell
-    mkdir /data/data 0771 system system
-    mkdir /data/app-private 0771 system system
-    mkdir /data/app 0771 system system
-    mkdir /data/property 0700 root root
-
-    # create dalvik-cache and double-check the perms
-    mkdir /data/dalvik-cache 0771 system system
-    chown system system /data/dalvik-cache
-    chmod 0771 /data/dalvik-cache
-
-    mkdir /cache/dalvik-cache 0771 system system
-    chown system system /cache/dalvik-cache
-    chmod 0771 /cache/dalvik-cache
-
-    # create the lost+found directories, so as to enforce our permissions
-    mkdir /data/lost+found 0770
-    mkdir /cache/lost+found 0770
-
-    # double check the perms, in case lost+found already exists, and set owner
-    chown root root /data/lost+found
-    chmod 0770 /data/lost+found
-    chown root root /cache/lost+found
-    chmod 0770 /cache/lost+found
-
 {
     CPUINFO=$(cat /proc/cpuinfo | busybox grep Hardware | busybox cut - -d ' ' -f 2,3);
     if [ "${CPUINFO}" == "sapphire" ]; then
@@ -91,40 +19,6 @@
 	
     fi;
 }
-
-#echo "--- Clearing Cache";
-#    if [ -e /system/bin/clearcache ]; then
-#	/system/bin/sh /system/bin/clearcache;
-#   fi;
-
-
-#echo "--- Symlinking System Dalvik-Cache to Data Partition";
-#for sysfile in /data/system-cache/*.dex ; do
-#	if [ -e /data/dalvik-cache/$(basename $sysfile) ]; then
-#		busybox rm /data/dalvik-cache/$(basename $sysfile); > /dev/null
-#	fi;
-#	if [ -h /data/dalvik-cache/$(basename $sysfile) ]; then
-#		busybox rm /data/dalvik-cache/$(basename $sysfile); > /dev/null
-#	fi;
-#	busybox ln -s $sysfile /data/dalvik-cache/$(basename $sysfile);
-#done;
-
-#echo "--- Clearing Cache";
-#    if [ -e /system/bin/clearcache ]; then
-#	/system/bin/sh /system/bin/clearcache;
-#   fi;
-
-
-#echo "--- Symlinking System Dalvik-Cache to Data Partition";
-#for sysfile in /data/system-cache/*.dex ; do
-#	if [ -e /data/dalvik-cache/$(basename $sysfile) ]; then
-#		busybox rm /data/dalvik-cache/$(basename $sysfile); > /dev/null
-#	fi;
-#	if [ -h /data/dalvik-cache/$(basename $sysfile) ]; then
-#		busybox rm /data/dalvik-cache/$(basename $sysfile); > /dev/null
-#	fi;
-#	busybox ln -s $sysfile /data/dalvik-cache/$(basename $sysfile);
-#done;
 
 echo "--- Symlinking Media Folder";
 	busybox rm -r /data/.media;  > /dev/null
@@ -148,8 +42,3 @@ done;
 #    if [ -e /system/bin/appfix ]; then
 #	/system/bin/sh /system/bin/appfix;
 #    fi;
-
-#echo "--- Running autozipalign.";
-#        if [ -e /system/bin/autozipalign ]; then
-#            /system/bin/sh /system/bin/autozipalign;
-#        fi;
