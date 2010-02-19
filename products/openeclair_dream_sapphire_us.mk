@@ -36,24 +36,17 @@ ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=16384
 
 USE_CAMERA_STUB := false
 
-# Build WebKit with V8
-#JS_ENGINE=V8
+-WITH_JIT := true
 
-JS_ENGINE=jsc
+# Build WebKit with V8
+JS_ENGINE=V8
+#JS_ENGINE=jsc
+
+# Pick up some sounds
+include frameworks/base/data/sounds/AudioPackage4.mk
 
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
-
-# Try to auto-vectorize since we are on a NEON-capable device
-TARGET_arm_CFLAGS += \
-    -mvectorize-with-neon-quad \
-    -ftree-vectorize \
-    -ffast-math
-
-TARGET_thumb_CFLAGS += \
-    -mvectorize-with-neon-quad \
-    -ftree-vectorize \
-    -ffast-math
 
 PRODUCT_NAME := openeclair_dream_sapphire_us
 
@@ -358,5 +351,4 @@ PRODUCT_LOCALES := \
     uk_UA \
     vi_VN \
     zh_CN \
-    zh_TW \
-    hdpi
+    zh_TW
