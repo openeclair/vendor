@@ -30,8 +30,9 @@ ADDITIONAL_BUILD_PROPERTIES += ro.com.android.dataroaming=true
 ADDITIONAL_BUILD_PROPERTIES += ro.ril.hsxpa=2
 ADDITIONAL_BUILD_PROPERTIES += ro.ril.gprsclass=10
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
-
-ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.2.1
+ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.2.2-B2
+ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
+ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=16384
 
 USE_CAMERA_STUB := false
 
