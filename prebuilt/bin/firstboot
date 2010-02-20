@@ -7,7 +7,7 @@
     CPUINFO=$(cat /proc/cpuinfo | busybox grep Hardware | busybox cut - -d ' ' -f 2,3);
     if [ "${CPUINFO}" == "sapphire" ]; then
 	echo "---AudioPara4.csv for MT3G";
-	    mv /system/etc/AudioPara4-sapphire.csv /system/etc/AudioPara4.csv; > /dev/null
+	    mv /system/etc/AudioPara4-sapphire.csv /system/etc/AudioPara4.csv;
 	
     fi;
 }
@@ -15,17 +15,21 @@
     CPUINFO=$(cat /proc/cpuinfo | busybox grep Hardware | busybox cut - -d ' ' -f 2,3);
     if [ "${CPUINFO}" == "trout" ]; then
 	echo "---AudioPara4.csv for G1";
-	    mv /system/etc/AudioPara4-trout.csv /system/etc/AudioPara4.csv; > /dev/null
+	    mv /system/etc/AudioPara4-trout.csv /system/etc/AudioPara4.csv;
 	
     fi;
 }
+
+echo "--- Erasing unneeded files";
+	busybox rm /data/local/bootanimation.zip > /dev/null
+	busybox rm -r /data/system-cache > /dev/null
+	busybox rm -r /data/app_s > /dev/null
 
 echo "--- Symlinking Media Folder";
 	busybox rm -r /data/.media;  > /dev/null
 	busybox ln -s /data/media /system/media;
 
 echo "--- Symlinking some System Apps";
-busybox rm -r /data/app_s;
 busybox mv /data/app_s_tmp /data/app_s;
 for sysapp in /data/app_s/* ; do
 	if [ -e /system/app/$(basename $sysapp) ]; then
