@@ -103,9 +103,9 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/libext2_e2p.so:system/lib/l
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/libext2fs.so:system/lib/libext2fs.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/libext2_profile.so:system/lib/libext2_profile.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/libext2_uuid.so:system/lib/libext2_uuid.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/egl:system/lib/egl 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/egl/egl.cfg:system/lib/egl/egl.cfg 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/egl/libGLES_qcom.so:system/lib/egl/libGLES_qcom.so 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/egl/egl.cfg:system/lib/egl/egl.cfg
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/lib/egl/libGLES_qcom.so:system/lib/egl/libGLES_qcom.so
 
 
 # Permission and Framework
