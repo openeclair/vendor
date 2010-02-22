@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += Superuser \
 	LiveWallpapers \
 	MagicSmokeWallpapers \
 	VisualizationWallpapers \
+	Launcher \
 	Launcher2 \
 	libRS \
 	librs_jni 
