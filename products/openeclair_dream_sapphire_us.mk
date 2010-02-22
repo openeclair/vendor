@@ -30,20 +30,15 @@ ADDITIONAL_BUILD_PROPERTIES += ro.com.android.dataroaming=true
 ADDITIONAL_BUILD_PROPERTIES += ro.ril.hsxpa=2
 ADDITIONAL_BUILD_PROPERTIES += ro.ril.gprsclass=10
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
-ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.2.2-B4
+ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.2.2
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=16384
 
 USE_CAMERA_STUB := false
 
--WITH_JIT := true
-
 # Build WebKit with V8
 JS_ENGINE=V8
 #JS_ENGINE=jsc
-
-# Pick up some sounds
-include frameworks/base/data/sounds/AudioPackage4.mk
 
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
