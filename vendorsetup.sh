@@ -22,5 +22,3 @@
 
 add_lunch_combo openeclair_dream_sapphire_us-userdebug
 add_lunch_combo openeclair_dream_sapphire_us-eng
-add_lunch_combo openeclair_sholes-userdebug
-add_lunch_combo openeclair_sholes-eng
