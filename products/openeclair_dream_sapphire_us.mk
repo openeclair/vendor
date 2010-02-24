@@ -24,11 +24,8 @@ TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.locationfeatures=1
 ADDITIONAL_BUILD_PROPERTIES += ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html
 ADDITIONAL_BUILD_PROPERTIES += ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/android-dev-phone-privacy.html
-ADDITIONAL_BUILD_PROPERTIES += keyguard.no_require_sim=true
-ADDITIONAL_BUILD_PROPERTIES += ro.com.android.dateformat=MM-dd-yyyy
-ADDITIONAL_BUILD_PROPERTIES += ro.com.android.dataroaming=true
-ADDITIONAL_BUILD_PROPERTIES += ro.ril.hsxpa=2
-ADDITIONAL_BUILD_PROPERTIES += ro.ril.gprsclass=10
+PRODUCT_PROPERTY_OVERRIDES += ro.ril.hsxpa=2
+PRODUCT_PROPERTY_OVERRIDES += ro.ril.gprsclass=10
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
 ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.2.2
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
