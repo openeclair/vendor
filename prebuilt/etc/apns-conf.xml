@@ -214,4 +214,6 @@
   <apn carrier="Wind WEB" mcc="222" mnc="88" apn="internet.wind" user="none" password="none" server="*" mmsproxy="" mmsport="" mmsc="" type="default,supl" />
   <apn carrier="Yesss" apn="web.yesss.at" proxy="" port="" user="" password="" server="" mmsc="" mmsproxy="" mmsport="" mcc="232" mnc="12" type="default,supl" />
   <apn carrier="Yesss" mcc="232" mnc="12" apn="web.yesss.at"/>
+  <apn carrier="E-Plus" apn="internet.eplus.de" user="eplus" pass="eplus" mcc="262" mnc="03" type="default"/>
+  <apn carrier="TelcelMMS"  apn="mms.itelcel.com" user="mmsgprs" pass="mmsgprs2003" mmsc="http://upaaps.telcel.com:8582/telcelwap.wml" mmsproxy="148.233.151.240" mmsport="8080" mcc="334" mnc="020"  type="mms" />
 </apns>
