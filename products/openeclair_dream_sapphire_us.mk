@@ -31,8 +31,6 @@ ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.2.2
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=16384
 
-USE_CAMERA_STUB := false
-
 # Build WebKit with V8
 JS_ENGINE=V8
 #JS_ENGINE=jsc
@@ -93,9 +91,9 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/TalkProvider.apk:system/app/
 # Libraries
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libspeech.so:system/lib/libspeech.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libcameraservice.so:system/lib/libcameraservice.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libcamera.so:system/lib/libcamera.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libqcamera.so:system/lib/libqcamera.so
+#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libcameraservice.so:system/lib/libcameraservice.so
+#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libcamera.so:system/lib/libcamera.so
+#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libqcamera.so:system/lib/libqcamera.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/sapphire-keypad.kcm.bin:system/etc/keychars/sapphire-keypad.kcm.bin
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/sensors.sapphire.so:system/lib/hw/sensors.sapphire.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_blkid.so:system/lib/libext2_blkid.so
@@ -104,9 +102,9 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_e2p.
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2fs.so:system/lib/libext2fs.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_profile.so:system/lib/libext2_profile.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_uuid.so:system/lib/libext2_uuid.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/egl/egl.cfg:system/lib/egl/egl.cfg
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/egl/libGLES_qcom.so:system/lib/egl/libGLES_qcom.so
+#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/egl/egl.cfg:system/lib/egl/egl.cfg
+#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so
+#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/egl/libGLES_qcom.so:system/lib/egl/libGLES_qcom.so
 
 
 # Permission and Framework
