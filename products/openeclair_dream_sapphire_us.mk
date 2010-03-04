@@ -19,7 +19,7 @@
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 
 # Custom Kernel
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
+#TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
 
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.locationfeatures=1
 ADDITIONAL_BUILD_PROPERTIES += ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html
