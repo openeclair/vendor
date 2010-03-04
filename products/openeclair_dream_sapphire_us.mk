@@ -34,8 +34,8 @@ JS_ENGINE=V8
 #JS_ENGINE=jsc
 
 # Build with JIT, disable by default
-WITH_JIT := true
-PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.execution-mode=int:fast
+#WITH_JIT := true
+#PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.execution-mode=int:fast
 
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
