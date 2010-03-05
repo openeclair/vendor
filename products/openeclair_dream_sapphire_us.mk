@@ -25,7 +25,7 @@ ADDITIONAL_BUILD_PROPERTIES += ro.com.google.locationfeatures=1
 ADDITIONAL_BUILD_PROPERTIES += ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html
 ADDITIONAL_BUILD_PROPERTIES += ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/android-dev-phone-privacy.html
 ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
-ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.2.2
+ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.3
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=16384
 
@@ -60,6 +60,9 @@ PRODUCT_PACKAGES += Superuser \
 	librs_jni 
 
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
+
+# Boot Animation by MINUS_Stl
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bootanimation.zip:system/media/bootanimation.zip
 
 # APKs
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Vending.apk:data/app_s_tmp/Vending.apk
