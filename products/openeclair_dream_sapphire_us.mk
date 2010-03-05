@@ -14,24 +14,32 @@
 # limitations under the License.
 #
 
-# This is the top-level configuration for a US-configured openeclairMod build
+# This is the top-level configuration for a US-configured OpenEclair build
 
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 
-# Custom Kernel
-#TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
-
-ADDITIONAL_BUILD_PROPERTIES += ro.com.google.locationfeatures=1
-ADDITIONAL_BUILD_PROPERTIES += ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html
-ADDITIONAL_BUILD_PROPERTIES += ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/android-dev-phone-privacy.html
-ADDITIONAL_BUILD_PROPERTIES += ro.com.google.clientidbase=android-tmobile
+# Build.prop Properties
+PRODUCT_PROPERTY_OVERRIDES := \
+ro.com.google.locationfeatures=1 \
+ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html \
+ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/android-dev-phone-privacy.html \
+ro.com.google.clientidbase=android-tmobile
 ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.3
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=16384
+# RIL Hacks from Amon_RA
+ADDITIONAL_BUILD_PROPERTIES += \
+ro.ril.hep=1 \
+ro.ril.enable.dtm=1 \
+ro.ril.hsdpa.category=8 \
+ro.ril.enable.a53=1 \
+ro.ril.enable.3g.prefix=1 \
+ro.ril.htcmaskw1.bitmask = 4294967295 \
+ro.ril.htcmaskw1 = 14449 \
+ro.ril.hsupa.category = 5 \
 
 # Build WebKit with V8
 JS_ENGINE=V8
-#JS_ENGINE=jsc
 
 # Build with JIT, disable by default
 #WITH_JIT := true
@@ -39,12 +47,14 @@ JS_ENGINE=V8
 
 USE_CAMERA_STUB := true
 
-# Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
 
 PRODUCT_NAME := openeclair_dream_sapphire_us
 
-PRODUCT_PACKAGES += Superuser \
+PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
+
+PRODUCT_PACKAGES += \
+	Superuser \
 	AccountAndSyncSettings \
 	Bluetooth \
 	CertInstaller \
@@ -59,7 +69,8 @@ PRODUCT_PACKAGES += Superuser \
 	libRS \
 	librs_jni 
 
-PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
+# Custom Kernel
+#TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
 
 # Boot Animation by MINUS_Stl
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bootanimation.zip:data/media/bootanimation.zip
