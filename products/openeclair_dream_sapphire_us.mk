@@ -78,7 +78,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bootanimation.zi
 # APKs
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Vending.apk:system/app/Vending.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/wireless_tether_2_0-pre3_eclair.apk:data/app/wireless_tether_2_0-pre3_eclair.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/VoiceSearchWithKeyboard.apk:system/app/VoiceSearchWithKeyboard.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/VoiceSearch.apk:system/app/VoiceSearch.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:system/app/Maps.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Street.apk:system/app/Street.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/YouTube.apk:system/app/YouTube.apk
@@ -101,6 +101,8 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/NetworkLocation.apk:system/a
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/SetupWizard.apk:system/app/SetupWizard.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Talk.apk:system/app/Talk.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/TalkProvider.apk:system/app/TalkProvider.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/QuickOffice.apk:system/app/QuickOffice.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/PDFViewer.apk:system/app/PDFViewer.apk
 
 # Libraries
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so
