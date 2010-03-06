@@ -103,10 +103,12 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Talk.apk:system/app/Talk.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/TalkProvider.apk:system/app/TalkProvider.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/QuickOffice.apk:system/app/QuickOffice.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/PDFViewer.apk:system/app/PDFViewer.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/HTC_IME.apk:system/app/HTC_IME.apk
 
 # Libraries
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libspeech.so:system/lib/libspeech.so
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libt9.so:system/lib/libt9.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libcameraservice.so:system/lib/libcameraservice.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libcamera.so:system/lib/libcamera.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/liboemcamera.so:system/lib/liboemcamera.so
