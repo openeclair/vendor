@@ -110,6 +110,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libcamera
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/liboemcamera.so:system/lib/liboemcamera.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/sapphire-keypad.kcm.bin:system/etc/keychars/sapphire-keypad.kcm.bin
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/sensors.sapphire.so:system/lib/hw/sensors.sapphire.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libncurses.so:system/lib/libncurses.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_blkid.so:system/lib/libext2_blkid.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_com_err.so:system/lib/libext2_com_err.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_e2p.so:system/lib/libext2_e2p.so
@@ -166,6 +167,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/blank:system/xbi
 # Scripts and Binaries
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/appfix:system/bin/appfix
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/e2fsck:system/xbin/e2fsck 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/nano:system/xbin/nano
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/firstboot:system/bin/firstboot 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/fix_permissions:system/bin/fix_permissions 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/rosystem:system/bin/rosystem 
@@ -180,6 +182,9 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/fstab:system
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/sysctl.conf:system/etc/sysctl.conf 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/AudioPara4-trout.csv:system/etc/AudioPara4-trout.csv 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/AudioPara4-sapphire.csv:system/etc/AudioPara4-sapphire.csv
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/terminfo/l/linux:system/etc/terminfo/l/linux
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/terminfo/u/unknown:system/etc/terminfo/u/unknown
+
 
 # Boot init.d Files
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/init.d/00banner:system/etc/init.d/00banner 
