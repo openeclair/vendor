@@ -178,6 +178,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/usb-tether:s
 # /system/etc files
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/apns-conf.xml:system/etc/apns-conf.xml 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/dnsmasq.conf:system/etc/dnsmasq.conf 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/gps.conf:system/etc/gps.conf 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/fstab:system/etc/fstab 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/sysctl.conf:system/etc/sysctl.conf 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/AudioPara4-trout.csv:system/etc/AudioPara4-trout.csv 
