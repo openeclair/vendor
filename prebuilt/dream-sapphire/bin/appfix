@@ -17,10 +17,16 @@ then
 			if ( echo $line | grep 'package name=\"android.tether' > /dev/null );
 			then
 				IN_PACKAGES=1;
-			elif ( echo $line | grep 'package name=\"com.facebook' > /dev/null );
+			elif ( echo $line | grep 'package name=\"com.facebook.katana' > /dev/null );
 			then
 				IN_PACKAGES=1;
-			elif ( echo $line | grep 'package name=\"com.android.vending' > /dev/null );
+			elif ( echo $line | grep 'package name=\"com.htc.android.htcime' > /dev/null );
+			then
+				IN_PACKAGES=1;
+			elif ( echo $line | grep 'package name=\"com.htc.pdfreader' > /dev/null );
+			then
+				IN_PACKAGES=1;
+			elif ( echo $line | grep 'package name=\"com.google.android.apps.maps' > /dev/null );
 			then
 				IN_PACKAGES=1;
 			else

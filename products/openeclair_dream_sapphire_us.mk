@@ -74,17 +74,17 @@ PRODUCT_PACKAGES += \
 #TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
 
 # Boot Animation by MINUS_Stl
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bootanimation.zip:data/media/bootanimation.zip
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bootanimation.zip:data/media_tmp/bootanimation.zip
 
 # APKs
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Vending.apk:system/app/Vending.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/wireless_tether_2_0-pre3_eclair.apk:data/app/wireless_tether_2_0-pre3_eclair.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/wireless_tether_2_0-pre7.apk:data/app/wireless_tether_2_0-pre7.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/VoiceSearchWithKeyboard.apk:system/app/VoiceSearchWithKeyboard.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:system/app/Maps.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:data/app/com.google.android.apps.maps.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Street.apk:system/app/Street.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/YouTube.apk:system/app/YouTube.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GenieWidget.apk:system/app/GenieWidget.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Facebook.apk:system/app/Facebook.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Facebook.apk:data/app/com.facebook.katana.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/EnhancedGoogleSearchProvider.apk:system/app/EnhancedGoogleSearchProvider.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Gmail.apk:system/app/Gmail.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GmailProvider.apk:system/app/GmailProvider.apk
@@ -102,8 +102,8 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/NetworkLocation.apk:system/a
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/SetupWizard.apk:system/app/SetupWizard.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Talk.apk:system/app/Talk.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/TalkProvider.apk:system/app/TalkProvider.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/PDFViewer.apk:system/app/PDFViewer.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/HTC_IME.apk:system/app/HTC_IME.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/PDFViewer.apk:data/app/com.htc.pdfreader.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/HTC_IME.apk:data/app/com.htc.android.htcime.apk
 
 # Libraries
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so

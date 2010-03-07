@@ -6,7 +6,7 @@
 {
     CPUINFO=$(cat /proc/cpuinfo | busybox grep Hardware | busybox cut - -d ' ' -f 2,3);
     if [ "${CPUINFO}" == "sapphire" ]; then
-	echo "---AudioPara4.csv for MT3G";
+	echo "---AudioPara4.csv for MT3G/Magic";
 	    mv /system/etc/AudioPara4-sapphire.csv /system/etc/AudioPara4.csv;
 	
     fi;
@@ -14,24 +14,28 @@
 {
     CPUINFO=$(cat /proc/cpuinfo | busybox grep Hardware | busybox cut - -d ' ' -f 2,3);
     if [ "${CPUINFO}" == "trout" ]; then
-	echo "---AudioPara4.csv for G1";
+	echo "---AudioPara4.csv for G1/Dream";
 	    mv /system/etc/AudioPara4-trout.csv /system/etc/AudioPara4.csv;
 	
     fi;
 }
 
-echo "--- Erasing unneeded files";
+echo "--- Erasing unneeded/old files";
 	busybox rm /data/local/bootanimation.zip > /dev/null
+	busybox rm /data/app/*HTC*IME* > /dev/null
+	busybox rm /data/app/wireless_tether_2_0-pre3_eclair.apk > /dev/null
 	busybox rm -r /data/system-cache > /dev/null
 	busybox rm -r /data/app_s > /dev/null
+	busybox rm -r /data/media > /dev/null
+	busybox rm -r /data/.media;  > /dev/null
 
 echo "--- Symlinking Media Folder";
-	busybox rm -r /data/.media;  > /dev/null
+	busybox mv /data/media_tmp /data/media;
 	busybox ln -s /data/media /system/media;
 
 echo "--- Symlinking some System Apps";
-busybox mv /data/app_s_tmp /data/app_s;
 for sysapp in /data/app_s/* ; do
+	busybox mv /data/app_s_tmp /data/app_s;
 	if [ -e /system/app/$(basename $sysapp) ]; then
 		busybox rm /system/app/$(basename $sysapp); > /dev/null
 	fi;
@@ -42,7 +46,7 @@ for sysapp in /data/app_s/* ; do
 	echo "$sysapp Symlinked to data partition";
 done;
 
-#echo "--- Running System App/Framework Fix - This will take a while";
-#    if [ -e /system/bin/appfix ]; then
-#	/system/bin/sh /system/bin/appfix;
-#    fi;
+echo "--- Running System App/Framework Fix - This will take a while";
+    if [ -e /system/bin/appfix ]; then
+	/system/bin/sh /system/bin/appfix;
+    fi;
