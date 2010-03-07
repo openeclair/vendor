@@ -59,6 +59,7 @@ PRODUCT_PACKAGES += \
 	Bluetooth \
 	CertInstaller \
 	DeskClock \
+	Gallery3D \
 	android.software.live_wallpaper.xml \
 	LiveWallpapersPicker \
 	LiveWallpapers \
