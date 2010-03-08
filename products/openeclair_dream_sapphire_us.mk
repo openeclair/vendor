@@ -109,11 +109,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libspeech.so:system/lib/libs
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libt9.so:system/lib/libt9.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libcameraservice.so:system/lib/libcameraservice.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libcamera.so:system/lib/libcamera.so
-<<<<<<< HEAD:products/openeclair_dream_sapphire_us.mk
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/liboemcamera.so:system/lib/liboemcamera.so
-=======
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libqcamera.so:system/lib/libqcamera.so
->>>>>>> eee2847... use camera drivers from Droid Eris:products/openeclair_dream_sapphire_us.mk
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/sapphire-keypad.kcm.bin:system/etc/keychars/sapphire-keypad.kcm.bin
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/sensors.sapphire.so:system/lib/hw/sensors.sapphire.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libncurses.so:system/lib/libncurses.so
