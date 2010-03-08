@@ -176,12 +176,8 @@ PRODUCT_COPY_FILES += vendor/openeclair/root/init.trout.rc:$(TARGET_ROOT_OUT)/ro
 PRODUCT_COPY_FILES += vendor/openeclair/root/init.sapphire.rc:$(TARGET_ROOT_OUT)/root/init.sapphire.rc
 
 # Compcache
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/compcache/ramzswap.ko:system/modules/lib/modules/2.6.29.6-wg/compcache/ramzswap.ko
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/compcache/rzscontrol:system/bin/rzscontrol
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/memctl:system/bin/memctl 
-
-# Wireless Driver
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/wlan.ko:system/lib/modules/wlan.ko
 
 # Placeholders
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/blank:system/sd/placeholder
