@@ -1,0 +1,3 @@
+kernel/fs/compcache/ramzswap.ko
+kernel/drivers/video/backlight/lcd.ko
+kernel/drivers/net/wireless/tiwlan1251/wlan.ko
