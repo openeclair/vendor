@@ -42,8 +42,8 @@ ro.ril.hsupa.category = 5 \
 JS_ENGINE=V8
 
 # Build with JIT, disable by default
-#WITH_JIT := true
-#PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.execution-mode=int:fast
+WITH_JIT := true
+PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.execution-mode=int:fast
 
 KERNEL_MODULES_DIR:=/system/lib/modules
 
