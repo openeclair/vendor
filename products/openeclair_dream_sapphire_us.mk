@@ -69,7 +69,7 @@ PRODUCT_PACKAGES += \
 	librs_jni 
 
 # Custom Kernel
-#TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
 
 # Boot Animation by MINUS_Stl
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bootanimation.zip:data/media_tmp/bootanimation.zip
