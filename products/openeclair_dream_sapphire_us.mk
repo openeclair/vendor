@@ -104,6 +104,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Talk.apk:system/app/Talk.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/TalkProvider.apk:system/app/TalkProvider.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/PDFViewer.apk:data/app/com.htc.pdfreader.apk
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/HTC_IME.apk:data/app/com.htc.android.htcime.apk
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Clicker.apk:data/app/com.htc.clicker.apk
 
 # Libraries
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so
