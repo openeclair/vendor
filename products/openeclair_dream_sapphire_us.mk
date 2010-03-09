@@ -24,9 +24,11 @@ ro.com.google.locationfeatures=1 \
 ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html \
 ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/android-dev-phone-privacy.html \
 ro.com.google.clientidbase=android-tmobile
+keyguard.no_require_sim=true
 ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.3
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=16384
+
 # RIL Hacks from Amon_RA
 ADDITIONAL_BUILD_PROPERTIES += \
 ro.ril.hep=1 \
