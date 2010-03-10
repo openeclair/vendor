@@ -16,6 +16,9 @@
 
 # This is the top-level configuration for a US-configured OpenEclair build
 
+# Call overlays before running other builds
+PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
+
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 
 # Build.prop Properties
@@ -51,7 +54,6 @@ KERNEL_MODULES_DIR:=/system/lib/modules
 
 PRODUCT_NAME := openeclair_dream_sapphire_us
 
-PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
 PRODUCT_PACKAGES += \
 	Superuser \
