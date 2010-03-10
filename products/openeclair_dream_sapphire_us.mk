@@ -19,26 +19,26 @@
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 
 # Build.prop Properties
-PRODUCT_PROPERTY_OVERRIDES := \
-ro.com.google.locationfeatures=1 \
-ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html \
-ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/android-dev-phone-privacy.html \
-ro.com.google.clientidbase=android-tmobile \
-keyguard.no_require_sim=true
-ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.3
-ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
-ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=24568
+#PRODUCT_PROPERTY_OVERRIDES := \
+#ro.com.google.locationfeatures=1 \
+#ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html \
+#ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/android-dev-phone-privacy.html \
+#ro.com.google.clientidbase=android-tmobile \
+#keyguard.no_require_sim=true
+#ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.3
+#ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
+#ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=24568
 
 # RIL Hacks from Amon_RA
-ADDITIONAL_BUILD_PROPERTIES += \
-ro.ril.hep=1 \
-ro.ril.enable.dtm=1 \
-ro.ril.hsdpa.category=8 \
-ro.ril.enable.a53=1 \
-ro.ril.enable.3g.prefix=1 \
-ro.ril.htcmaskw1.bitmask = 4294967295 \
-ro.ril.htcmaskw1 = 14449 \
-ro.ril.hsupa.category = 5 \
+#ADDITIONAL_BUILD_PROPERTIES += \
+#ro.ril.hep=1 \
+#ro.ril.enable.dtm=1 \
+#ro.ril.hsdpa.category=8 \
+#ro.ril.enable.a53=1 \
+#ro.ril.enable.3g.prefix=1 \
+#ro.ril.htcmaskw1.bitmask = 4294967295 \
+#ro.ril.htcmaskw1 = 14449 \
+#ro.ril.hsupa.category = 5 \
 
 # Build WebKit with V8
 JS_ENGINE=V8
@@ -65,8 +65,8 @@ PRODUCT_PACKAGES += \
 	LiveWallpapers \
 	MagicSmokeWallpapers \
 	VisualizationWallpapers \
-	Launcher \
 	Launcher2 \
+	Launcher \
 	libRS \
 	librs_jni 
 
@@ -172,7 +172,8 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.maps.xml:
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/permissions/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/permissions/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml 
 
-# Custom build props
+# Custom build props / scripts
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/build.prop:system/build.prop 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/build.sapphire.prop:system/build.sapphire.prop
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/build.trout.prop:system/build.trout.prop 
 PRODUCT_COPY_FILES += vendor/openeclair/root/init.trout.rc:$(TARGET_ROOT_OUT)/root/init.trout.rc 
