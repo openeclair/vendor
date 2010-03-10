@@ -1,0 +1,257 @@
+assert compatible_with("0.2") == "true"
+assert getprop("ro.product.device") == "dream" || getprop("ro.build.product") == "dream" || getprop("ro.product.device") == "sapphire" || getprop("ro.build.product") == "sapphire"
+
+show_progress 0.2 0
+
+format SYSTEM:
+copy_dir PACKAGE:system SYSTEM:
+
+show_progress 0.2 0
+
+symlink toolbox SYSTEM:bin/getevent
+symlink toolbox SYSTEM:bin/getprop
+symlink toolbox SYSTEM:bin/hd
+symlink toolbox SYSTEM:bin/id
+symlink toolbox SYSTEM:bin/iftop
+symlink toolbox SYSTEM:bin/ioctl
+symlink toolbox SYSTEM:bin/log
+symlink toolbox SYSTEM:bin/mkdosfs
+symlink toolbox SYSTEM:bin/netstat
+symlink toolbox SYSTEM:bin/newfs_msdos
+symlink toolbox SYSTEM:bin/notify
+symlink toolbox SYSTEM:bin/reboot
+symlink toolbox SYSTEM:bin/schedtop
+symlink toolbox SYSTEM:bin/sendevent
+symlink toolbox SYSTEM:bin/setprop
+symlink toolbox SYSTEM:bin/smd
+symlink toolbox SYSTEM:bin/start
+symlink toolbox SYSTEM:bin/stop
+symlink toolbox SYSTEM:bin/vmstat
+symlink toolbox SYSTEM:bin/watchprops
+symlink toolbox SYSTEM:bin/wipe
+symlink logcat SYSTEM:bin/lolcat
+symlink /system/lib/modules/2.6.29.6-wg/kernel/drivers/net/wireless/tiwlan1251/wlan.ko SYSTEM:lib/modules/wlan.ko
+symlink /system/xbin/su SYSTEM:bin/su
+
+show_progress 0.1 0
+
+symlink /system/xbin/busybox SYSTEM:xbin/bb/[
+symlink /system/xbin/busybox SYSTEM:xbin/bb/[[
+symlink /system/xbin/busybox SYSTEM:xbin/bb/arping
+symlink /system/xbin/busybox SYSTEM:xbin/bb/ash
+symlink /system/xbin/busybox SYSTEM:xbin/bb/awk
+symlink /system/xbin/busybox SYSTEM:xbin/bb/basename
+symlink /system/xbin/busybox SYSTEM:xbin/bb/bbconfig
+symlink /system/xbin/busybox SYSTEM:xbin/bb/bunzip2
+symlink /system/xbin/busybox SYSTEM:xbin/bb/bzcat
+symlink /system/xbin/busybox SYSTEM:xbin/bb/bzip2
+symlink /system/xbin/busybox SYSTEM:xbin/bb/cat
+symlink /system/xbin/busybox SYSTEM:xbin/bb/catv
+symlink /system/xbin/busybox SYSTEM:xbin/bb/chattr
+symlink /system/xbin/busybox SYSTEM:xbin/bb/chgrp
+symlink /system/xbin/busybox SYSTEM:xbin/bb/chmod
+symlink /system/xbin/busybox SYSTEM:xbin/bb/chown
+symlink /system/xbin/busybox SYSTEM:xbin/bb/chroot
+symlink /system/xbin/busybox SYSTEM:xbin/bb/chrt
+symlink /system/xbin/busybox SYSTEM:xbin/bb/chvt
+symlink /system/xbin/busybox SYSTEM:xbin/bb/cksum
+symlink /system/xbin/busybox SYSTEM:xbin/bb/clear
+symlink /system/xbin/busybox SYSTEM:xbin/bb/cmp
+symlink /system/xbin/busybox SYSTEM:xbin/bb/cp
+symlink /system/xbin/busybox SYSTEM:xbin/bb/cpio
+symlink /system/xbin/busybox SYSTEM:xbin/bb/crond
+symlink /system/xbin/busybox SYSTEM:xbin/bb/crontab
+symlink /system/xbin/busybox SYSTEM:xbin/bb/cut
+symlink /system/xbin/busybox SYSTEM:xbin/bb/date
+symlink /system/xbin/busybox SYSTEM:xbin/bb/dc
+symlink /system/xbin/busybox SYSTEM:xbin/bb/dd
+symlink /system/xbin/busybox SYSTEM:xbin/bb/deallocvt
+symlink /system/xbin/busybox SYSTEM:xbin/bb/depmod
+symlink /system/xbin/busybox SYSTEM:xbin/bb/devmem
+symlink /system/xbin/busybox SYSTEM:xbin/bb/df
+symlink /system/xbin/busybox SYSTEM:xbin/bb/dhcprelay
+symlink /system/xbin/busybox SYSTEM:xbin/bb/diff
+symlink /system/xbin/busybox SYSTEM:xbin/bb/dirname
+symlink /system/xbin/busybox SYSTEM:xbin/bb/dmesg
+symlink /system/xbin/busybox SYSTEM:xbin/bb/dnsd
+symlink /system/xbin/busybox SYSTEM:xbin/bb/dos2unix
+symlink /system/xbin/busybox SYSTEM:xbin/bb/du
+symlink /system/xbin/busybox SYSTEM:xbin/bb/dumpkmap
+symlink /system/xbin/busybox SYSTEM:xbin/bb/dumpleases
+symlink /system/xbin/busybox SYSTEM:xbin/bb/echo
+symlink /system/xbin/busybox SYSTEM:xbin/bb/egrep
+symlink /system/xbin/busybox SYSTEM:xbin/bb/env
+symlink /system/xbin/busybox SYSTEM:xbin/bb/ether-wake
+symlink /system/xbin/busybox SYSTEM:xbin/bb/expr
+symlink /system/xbin/busybox SYSTEM:xbin/bb/false
+symlink /system/xbin/busybox SYSTEM:xbin/bb/fbset
+symlink /system/xbin/busybox SYSTEM:xbin/bb/fdisk
+symlink /system/xbin/busybox SYSTEM:xbin/bb/fgrep
+symlink /system/xbin/busybox SYSTEM:xbin/bb/find
+symlink /system/xbin/busybox SYSTEM:xbin/bb/fold
+symlink /system/xbin/busybox SYSTEM:xbin/bb/free
+symlink /system/xbin/busybox SYSTEM:xbin/bb/freeramdisk
+symlink /system/xbin/busybox SYSTEM:xbin/bb/fsck
+symlink /system/xbin/busybox SYSTEM:xbin/bb/fuser
+symlink /system/xbin/busybox SYSTEM:xbin/bb/getopt
+symlink /system/xbin/busybox SYSTEM:xbin/bb/grep
+symlink /system/xbin/busybox SYSTEM:xbin/bb/gunzip
+symlink /system/xbin/busybox SYSTEM:xbin/bb/gzip
+symlink /system/xbin/busybox SYSTEM:xbin/bb/head
+symlink /system/xbin/busybox SYSTEM:xbin/bb/hexdump
+symlink /system/xbin/busybox SYSTEM:xbin/bb/hostname
+symlink /system/xbin/busybox SYSTEM:xbin/bb/hwclock
+symlink /system/xbin/busybox SYSTEM:xbin/bb/ifconfig
+symlink /system/xbin/busybox SYSTEM:xbin/bb/ifdown
+symlink /system/xbin/busybox SYSTEM:xbin/bb/ifup
+symlink /system/xbin/busybox SYSTEM:xbin/bb/insmod
+symlink /system/xbin/busybox SYSTEM:xbin/bb/install
+symlink /system/xbin/busybox SYSTEM:xbin/bb/ip
+symlink /system/xbin/busybox SYSTEM:xbin/bb/ipaddr
+symlink /system/xbin/busybox SYSTEM:xbin/bb/iplink
+symlink /system/xbin/busybox SYSTEM:xbin/bb/iproute
+symlink /system/xbin/busybox SYSTEM:xbin/bb/iprule
+symlink /system/xbin/busybox SYSTEM:xbin/bb/iptunnel
+symlink /system/xbin/busybox SYSTEM:xbin/bb/kbd_mode
+symlink /system/xbin/busybox SYSTEM:xbin/bb/kill
+symlink /system/xbin/busybox SYSTEM:xbin/bb/killall
+symlink /system/xbin/busybox SYSTEM:xbin/bb/killall5
+symlink /system/xbin/busybox SYSTEM:xbin/bb/last
+symlink /system/xbin/busybox SYSTEM:xbin/bb/length
+symlink /system/xbin/busybox SYSTEM:xbin/bb/less
+symlink /system/xbin/busybox SYSTEM:xbin/bb/ln
+symlink /system/xbin/busybox SYSTEM:xbin/bb/loadfont
+symlink /system/xbin/busybox SYSTEM:xbin/bb/loadkmap
+symlink /system/xbin/busybox SYSTEM:xbin/bb/losetup
+symlink /system/xbin/busybox SYSTEM:xbin/bb/ls
+symlink /system/xbin/busybox SYSTEM:xbin/bb/lsattr
+symlink /system/xbin/busybox SYSTEM:xbin/bb/lsmod
+symlink /system/xbin/busybox SYSTEM:xbin/bb/makedevs
+symlink /system/xbin/busybox SYSTEM:xbin/bb/md5sum
+symlink /system/xbin/busybox SYSTEM:xbin/bb/mdev
+symlink /system/xbin/busybox SYSTEM:xbin/bb/mkdir
+symlink /system/xbin/busybox SYSTEM:xbin/bb/mkfifo
+symlink /system/xbin/busybox SYSTEM:xbin/bb/mknod
+symlink /system/xbin/busybox SYSTEM:xbin/bb/mkswap
+symlink /system/xbin/busybox SYSTEM:xbin/bb/mktemp
+symlink /system/xbin/busybox SYSTEM:xbin/bb/modprobe
+symlink /system/xbin/busybox SYSTEM:xbin/bb/more
+symlink /system/xbin/busybox SYSTEM:xbin/bb/mount
+symlink /system/xbin/busybox SYSTEM:xbin/bb/mountpoint
+symlink /system/xbin/busybox SYSTEM:xbin/bb/mv
+symlink /system/xbin/busybox SYSTEM:xbin/bb/nameif
+symlink /system/xbin/busybox SYSTEM:xbin/bb/nc
+symlink /system/xbin/busybox SYSTEM:xbin/bb/netstat
+symlink /system/xbin/busybox SYSTEM:xbin/bb/nice
+symlink /system/xbin/busybox SYSTEM:xbin/bb/nohup
+symlink /system/xbin/busybox SYSTEM:xbin/bb/nslookup
+symlink /system/xbin/busybox SYSTEM:xbin/bb/od
+symlink /system/xbin/busybox SYSTEM:xbin/bb/openvt
+symlink /system/xbin/busybox SYSTEM:xbin/bb/patch
+symlink /system/xbin/busybox SYSTEM:xbin/bb/pidof
+symlink /system/xbin/busybox SYSTEM:xbin/bb/pipe_progress
+symlink /system/xbin/busybox SYSTEM:xbin/bb/pivot_root
+symlink /system/xbin/busybox SYSTEM:xbin/bb/printenv
+symlink /system/xbin/busybox SYSTEM:xbin/bb/printf
+symlink /system/xbin/busybox SYSTEM:xbin/bb/ps
+symlink /system/xbin/busybox SYSTEM:xbin/bb/pwd
+symlink /system/xbin/busybox SYSTEM:xbin/bb/rdate
+symlink /system/xbin/busybox SYSTEM:xbin/bb/rdev
+symlink /system/xbin/busybox SYSTEM:xbin/bb/readlink
+symlink /system/xbin/busybox SYSTEM:xbin/bb/readprofile
+symlink /system/xbin/busybox SYSTEM:xbin/bb/realpath
+symlink /system/xbin/busybox SYSTEM:xbin/bb/renice
+symlink /system/xbin/busybox SYSTEM:xbin/bb/reset
+symlink /system/xbin/busybox SYSTEM:xbin/bb/rm
+symlink /system/xbin/busybox SYSTEM:xbin/bb/rmdir
+symlink /system/xbin/busybox SYSTEM:xbin/bb/rmmod
+symlink /system/xbin/busybox SYSTEM:xbin/bb/route
+symlink /system/xbin/busybox SYSTEM:xbin/bb/run-parts
+symlink /system/xbin/busybox SYSTEM:xbin/bb/sed
+symlink /system/xbin/busybox SYSTEM:xbin/bb/seq
+symlink /system/xbin/busybox SYSTEM:xbin/bb/setconsole
+symlink /system/xbin/busybox SYSTEM:xbin/bb/setkeycodes
+symlink /system/xbin/busybox SYSTEM:xbin/bb/setlogcons
+symlink /system/xbin/busybox SYSTEM:xbin/bb/setsid
+symlink /system/xbin/busybox SYSTEM:xbin/bb/sha1sum
+symlink /system/xbin/busybox SYSTEM:xbin/bb/showkey
+symlink /system/xbin/busybox SYSTEM:xbin/bb/sleep
+symlink /system/xbin/busybox SYSTEM:xbin/bb/sort
+symlink /system/xbin/busybox SYSTEM:xbin/bb/split
+symlink /system/xbin/busybox SYSTEM:xbin/bb/stat
+symlink /system/xbin/busybox SYSTEM:xbin/bb/strings
+symlink /system/xbin/busybox SYSTEM:xbin/bb/stty
+symlink /system/xbin/busybox SYSTEM:xbin/bb/swapoff
+symlink /system/xbin/busybox SYSTEM:xbin/bb/swapon
+symlink /system/xbin/busybox SYSTEM:xbin/bb/switch_root
+symlink /system/xbin/busybox SYSTEM:xbin/bb/sync
+symlink /system/xbin/busybox SYSTEM:xbin/bb/sysctl
+symlink /system/xbin/busybox SYSTEM:xbin/bb/tac
+symlink /system/xbin/busybox SYSTEM:xbin/bb/tail
+symlink /system/xbin/busybox SYSTEM:xbin/bb/tar
+symlink /system/xbin/busybox SYSTEM:xbin/bb/tcpsvd
+symlink /system/xbin/busybox SYSTEM:xbin/bb/tee
+symlink /system/xbin/busybox SYSTEM:xbin/bb/telnet
+symlink /system/xbin/busybox SYSTEM:xbin/bb/telnetd
+symlink /system/xbin/busybox SYSTEM:xbin/bb/test
+symlink /system/xbin/busybox SYSTEM:xbin/bb/tftp
+symlink /system/xbin/busybox SYSTEM:xbin/bb/time
+symlink /system/xbin/busybox SYSTEM:xbin/bb/top
+symlink /system/xbin/busybox SYSTEM:xbin/bb/touch
+symlink /system/xbin/busybox SYSTEM:xbin/bb/tr
+symlink /system/xbin/busybox SYSTEM:xbin/bb/traceroute
+symlink /system/xbin/busybox SYSTEM:xbin/bb/true
+symlink /system/xbin/busybox SYSTEM:xbin/bb/tty
+symlink /system/xbin/busybox SYSTEM:xbin/bb/udhcpd
+symlink /system/xbin/busybox SYSTEM:xbin/bb/udpsvd
+symlink /system/xbin/busybox SYSTEM:xbin/bb/umount
+symlink /system/xbin/busybox SYSTEM:xbin/bb/uname
+symlink /system/xbin/busybox SYSTEM:xbin/bb/uniq
+symlink /system/xbin/busybox SYSTEM:xbin/bb/unix2dos
+symlink /system/xbin/busybox SYSTEM:xbin/bb/unzip
+symlink /system/xbin/busybox SYSTEM:xbin/bb/uptime
+symlink /system/xbin/busybox SYSTEM:xbin/bb/usleep
+symlink /system/xbin/busybox SYSTEM:xbin/bb/uudecode
+symlink /system/xbin/busybox SYSTEM:xbin/bb/uuencode
+symlink /system/xbin/busybox SYSTEM:xbin/bb/vconfig
+symlink /system/xbin/busybox SYSTEM:xbin/bb/vi
+symlink /system/xbin/busybox SYSTEM:xbin/bb/watch
+symlink /system/xbin/busybox SYSTEM:xbin/bb/wc
+symlink /system/xbin/busybox SYSTEM:xbin/bb/wget
+symlink /system/xbin/busybox SYSTEM:xbin/bb/which
+symlink /system/xbin/busybox SYSTEM:xbin/bb/who
+symlink /system/xbin/busybox SYSTEM:xbin/bb/whoami
+symlink /system/xbin/busybox SYSTEM:xbin/bb/xargs
+symlink /system/xbin/busybox SYSTEM:xbin/bb/yes
+symlink /system/xbin/busybox SYSTEM:xbin/bb/zcat
+
+set_perm_recursive 0 0 0755 0644 SYSTEM:
+set_perm_recursive 0 2000 0755 0755 SYSTEM:bin
+set_perm_recursive 0 2000 0755 0755 SYSTEM:xbin
+set_perm_recursive 0 2000 0755 0755 SYSTEM:etc/init.d
+set_perm 0 3003 02755 SYSTEM:bin/netcfg
+set_perm 0 3004 02755 SYSTEM:bin/ping
+set_perm 1001 1005 0440 SYSTEM:etc/AudioPara4-trout.csv
+set_perm 1001 1005 0440 SYSTEM:etc/AudioPara4-sapphire.csv
+set_perm_recursive 1002 1002 0755 0440 SYSTEM:etc/bluez
+set_perm 0 0 0755 SYSTEM:etc/bluez
+set_perm 1002 1002 0440 SYSTEM:etc/dbus.conf
+set_perm 1014 2000 0550 SYSTEM:etc/dhcpcd/dhcpcd-run-hooks
+set_perm 0 2000 0550 SYSTEM:etc/init.goldfish.sh
+set_perm_recursive 0 0 0755 0555 SYSTEM:etc/ppp
+set_perm 0 0 04755 SYSTEM:xbin/su
+
+show_progress 0.2 0
+
+delete DATA:app
+copy_dir PACKAGE:data DATA:
+set_perm 1000 1000 0771 DATA:app
+
+show_progress 0.2 0
+format BOOT:
+write_raw_image PACKAGE:boot.img BOOT:
+
+show_progress 0.1 0
+
+format CACHE:
+show_progress 0.1 10

@@ -173,6 +173,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/permissions/
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/permissions/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml 
 
 # Custom build props / scripts
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/update-script:META-INF/com/google/android/update-script 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/build.prop:system/build.prop 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/build.sapphire.prop:system/build.sapphire.prop
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/build.trout.prop:system/build.trout.prop 
