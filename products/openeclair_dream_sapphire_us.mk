@@ -27,7 +27,7 @@ ro.com.google.clientidbase=android-tmobile \
 keyguard.no_require_sim=true
 ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.3
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
-ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=16384
+ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=24568
 
 # RIL Hacks from Amon_RA
 ADDITIONAL_BUILD_PROPERTIES += \
