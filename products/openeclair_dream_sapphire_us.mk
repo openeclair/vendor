@@ -67,10 +67,13 @@ PRODUCT_PACKAGES += \
 	LiveWallpapers \
 	MagicSmokeWallpapers \
 	VisualizationWallpapers \
-	Launcher2 \
 	Launcher \
 	libRS \
 	librs_jni 
+
+# Use ahmgsk_mod's Launcher2 for now
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Launcher2.apk:system/app/Launcher2.apk
+
 
 # Custom Kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
