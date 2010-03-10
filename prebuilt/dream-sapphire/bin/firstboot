@@ -20,27 +20,27 @@
     fi;
 }
 
-echo "--- Erasing unneeded/old files";
-	busybox rm /data/local/bootanimation.zip > /dev/null
-	busybox rm /data/app/*HTC*IME* > /dev/null
-	busybox rm /data/app/wireless_tether_2_0-pre3_eclair.apk > /dev/null
-	busybox rm -r /data/system-cache > /dev/null
-	busybox rm -r /data/app_s > /dev/null
-	busybox rm -r /data/media > /dev/null
-	busybox rm -r /data/.media;  > /dev/null
+echo "--- Erasing unneeded/old files (expect some errors to show)";
+	busybox rm /data/local/bootanimation.zip
+	busybox rm /data/app/*HTC*IME*
+	busybox rm /data/app/wireless_tether_2_0-pre3_eclair.apk
+	busybox rm -r /data/system-cache
+	busybox rm -r /data/app_s
+	busybox rm -r /data/media
+	busybox rm -r /data/.media;
 
 echo "--- Symlinking Media Folder";
 	busybox mv /data/media_tmp /data/media;
 	busybox ln -s /data/media /system/media;
 
 echo "--- Symlinking some System Apps";
+busybox mv /data/app_s_tmp /data/app_s;
 for sysapp in /data/app_s/* ; do
-	busybox mv /data/app_s_tmp /data/app_s;
 	if [ -e /system/app/$(basename $sysapp) ]; then
-		busybox rm /system/app/$(basename $sysapp); > /dev/null
+		busybox rm /system/app/$(basename $sysapp);
 	fi;
 	if [ -h /system/app/$(basename $sysapp) ]; then
-		busybox rm /system/app/$(basename $sysapp); > /dev/null
+		busybox rm /system/app/$(basename $sysapp);
 	fi;
 	busybox ln -s $sysapp /system/app/$(basename $sysapp);
 	echo "$sysapp Symlinked to data partition";
