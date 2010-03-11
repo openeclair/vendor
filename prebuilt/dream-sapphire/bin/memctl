@@ -10,6 +10,7 @@ CCDEV=/dev/block/ramzswap0
 SWDEV=`busybox fdisk -l /dev/block/mmcblk0 | busybox grep "Linux swap" | busybox awk '{print $1}'`
 MODULE=ramzswap
 SIZE=`getprop persist.service.memctl_size`
+SWAPPINESS=`getprop persist.service.memctl_swappiness`
 MODULES_DIR=/system/lib/modules/`uname -r`
 
 case "$1" in
@@ -23,11 +24,13 @@ case "$1" in
 	/system/bin/sh /system/bin/memctl disabled
         modprobe $MODULE
         rzscontrol $CCDEV --init -d $SIZE
+	echo $SWAPPINESS > /proc/sys/vm/swappiness;
         swapon $CCDEV
 		;;
 
 	swap)
 	/system/bin/sh /system/bin/memctl disabled
+	echo $SWAPPINESS > /proc/sys/vm/swappiness;
 	swapon $SWDEV
 		;;
 
@@ -35,6 +38,7 @@ case "$1" in
 	/system/bin/sh /system/bin/memctl disabled
 	modprobe $MODULE
 	rzscontrol $CCDEV --init -d $SIZE -b $SWDEV
+	echo $SWAPPINESS > /proc/sys/vm/swappiness;
 	swapon $CCDEV
 		;;
 
