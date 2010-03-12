@@ -196,6 +196,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/blank:system/xbi
 
 # Scripts and Binaries
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/appfix:system/bin/appfix
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/arenice:system/bin/arenice
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/e2fsck:system/xbin/e2fsck 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/nano:system/xbin/nano
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/firstboot:system/bin/firstboot 
