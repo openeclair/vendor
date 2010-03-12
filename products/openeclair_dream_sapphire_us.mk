@@ -215,6 +215,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/AudioPara4-t
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/AudioPara4-sapphire.csv:system/etc/AudioPara4-sapphire.csv
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/terminfo/l/linux:system/etc/terminfo/l/linux
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/terminfo/u/unknown:system/etc/terminfo/u/unknown
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/security/cacerts.bks:system/etc/security/cacerts.bks
 
 
 # Boot init.d Files
