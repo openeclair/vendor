@@ -1,5 +1,4 @@
 assert compatible_with("0.2") == "true"
-assert getprop("ro.product.device") == "dream" || getprop("ro.build.product") == "dream" || getprop("ro.product.device") == "sapphire" || getprop("ro.build.product") == "sapphire"
 
 show_progress 0.2 0
 
