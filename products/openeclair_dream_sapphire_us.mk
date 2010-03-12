@@ -31,6 +31,7 @@ $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 #ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.3
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=24568
+ADDITIONAL_DEFAULT_PROPERTIES += persist.service.auto_renice=1
 
 # RIL Hacks from Amon_RA
 #ADDITIONAL_BUILD_PROPERTIES += \
