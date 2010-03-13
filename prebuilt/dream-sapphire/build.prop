@@ -48,8 +48,12 @@ ro.config.sync=yes
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 ro.kernel.android.checkjni=1
 
+# OpenEclair Credits List: http://short.to/18h0a
+ro.modversion=OpenEclair-v1.3
 
+#
 # RIL HACKS by Amon_RA
+#
 ro.ril.hep=1
 ro.ril.enable.dtm=1
 ro.ril.hsdpa.category=8
@@ -59,8 +63,50 @@ ro.ril.htcmaskw1.bitmask=4294967295
 ro.ril.htcmaskw1=14449
 ro.ril.hsupa.category=5
 
-ro.modversion=OpenEclair-v1.3
+#
+# Video/Camera/Audio Encode/Decode Prop
+#
+ro.media.enc.hprof.file.format=mp4
+ro.media.enc.hprof.codec.vid=m4v
+ro.media.enc.hprof.codec.aud=amrnb
+ro.media.enc.hprof.vid.width=720
+ro.media.enc.hprof.vid.height=480
+ro.media.enc.hprof.vid.fps=30
+ro.media.enc.hprof.vid.bps=2000000
+ro.media.enc.hprof.aud.bps=12200
+ro.media.enc.hprof.aud.hz=8000
+ro.media.enc.hprof.aud.ch=1
+ro.media.enc.hprof.duration=60
+ro.media.enc.lprof.file.format=3gp
+ro.media.enc.lprof.codec.vid=m4v
+ro.media.enc.lprof.codec.aud=amrnb
+ro.media.enc.lprof.vid.width=176
+ro.media.enc.lprof.vid.height=144
+ro.media.enc.lprof.vid.fps=30
+ro.media.enc.lprof.vid.bps=256000
+ro.media.enc.lprof.aud.bps=12200
+ro.media.enc.lprof.aud.hz=8000
+ro.media.enc.lprof.aud.ch=1
+ro.media.enc.lprof.duration=30
+ro.media.enc.file.format=3gp,mp4
+ro.media.enc.vid.codec=m4v,h263
+ro.media.enc.aud.codec=amrnb
+ro.media.enc.vid.h263.width=176,800
+ro.media.enc.vid.h263.height=144,480
+ro.media.enc.vid.h263.bps=64000,1000000
+ro.media.enc.vid.h263.fps=1,30
+ro.media.enc.vid.m4v.width=176,800
+ro.media.enc.vid.m4v.height=144,480
+ro.media.enc.vid.m4v.bps=64000,2000000
+ro.media.enc.vid.m4v.fps=1,30
+ro.media.enc.aud.amrnb.bps=5525,12200
+ro.media.enc.aud.amrnb.hz=8000,8000
+ro.media.enc.aud.amrnb.ch=1,1
+ro.media.dec.aud.wma.enabled=1
+ro.media.dec.vid.wmv.enabled=1
+ro.media.cam.preview.fps=0
+ro.media.dec.jpeg.memcap=20000000
+ro.media.enc.jpeg.quality=90
 
-# Disable JIT
+# JIT Preference (int:fast or int:jit)
 dalvik.vm.execution-mode=int:fast
-
