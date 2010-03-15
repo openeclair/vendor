@@ -220,14 +220,14 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/terminfo/u/u
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/security/cacerts.bks:system/etc/security/cacerts.bks
 
 
-# Boot init.d Files
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/init.d/00banner:system/etc/init.d/00banner 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/init.d/01sysctl:system/etc/init.d/01sysctl 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/init.d/02setupext:system/etc/init.d/02setupext 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/init.d/03firstboot:system/etc/init.d/03firstboot 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/init.d/04apps2sd:system/etc/init.d/04apps2sd 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/init.d/05userinit:system/etc/init.d/05userinit 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/init.d/99complete:system/etc/init.d/99complete 
+# /system/etc/init.d scripts
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/02setupext:system/etc/init.d/02setupext 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/04apps2sd:system/etc/init.d/04apps2sd 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/05userinit:system/etc/init.d/05userinit 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/99complete:system/etc/init.d/99complete 
 
 # Extra Audio Notifications and Ringtones
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/media/alarms/Alarm_Beep_01.ogg:data/media_tmp/audio/alarms/Alarm_Beep_01.ogg
