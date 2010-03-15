@@ -81,7 +81,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Launcher2.apk:system/app/Lau
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
 
 # Boot Animation by MINUS_Stl
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bootanimation.zip:data/media_tmp/bootanimation.zip
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/media/bootanimation.zip:data/media_tmp/bootanimation.zip
 
 # APKs
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Vending.apk:system/app/Vending.apk
@@ -117,11 +117,11 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Clicker.apk:data/app/com.htc
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libspeech.so:system/lib/libspeech.so
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libt9.so:system/lib/libt9.so
-#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libcameraservice.so:system/lib/libcameraservice.so
-#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libcamera.so:system/lib/libcamera.so
-#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/camera/libqcamera.so:system/lib/libqcamera.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/sapphire-keypad.kcm.bin:system/etc/keychars/sapphire-keypad.kcm.bin
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/sensors.sapphire.so:system/lib/hw/sensors.sapphire.so
+#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libcameraservice.so:system/lib/libcameraservice.so
+#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libcamera.so:system/lib/libcamera.so
+#PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libqcamera.so:system/lib/libqcamera.so
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/keychars/sapphire-keypad.kcm.bin:system/etc/keychars/sapphire-keypad.kcm.bin
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/hw/sensors.sapphire.so:system/lib/hw/sensors.sapphire.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libncurses.so:system/lib/libncurses.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_blkid.so:system/lib/libext2_blkid.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_com_err.so:system/lib/libext2_com_err.so
@@ -187,8 +187,8 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/build.trout.prop
 PRODUCT_COPY_FILES += vendor/openeclair/root/init.trout.rc:$(TARGET_ROOT_OUT)/root/init.trout.rc 
 PRODUCT_COPY_FILES += vendor/openeclair/root/init.sapphire.rc:$(TARGET_ROOT_OUT)/root/init.sapphire.rc
 
-# Compcache
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/compcache/rzscontrol:system/bin/rzscontrol
+# Compcache / Memctl
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/rzscontrol:system/bin/rzscontrol
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/memctl:system/bin/memctl 
 
 # Placeholders
