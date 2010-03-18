@@ -74,7 +74,7 @@ PRODUCT_PACKAGES += \
 	librs_jni 
 
 # Use ahmgsk_mod's Launcher2 for now
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Launcher2.apk:system/app/Launcher2.apk
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/app/Launcher2.apk:system/app/Launcher2.apk
 
 
 # Custom Kernel
@@ -83,40 +83,7 @@ TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
 # Boot Animation by MINUS_Stl
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/media/bootanimation.zip:data/media_tmp/bootanimation.zip
 
-# APKs
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Vending.apk:system/app/Vending.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/wireless_tether_2_0-pre7.apk:data/app/wireless_tether_2_0-pre7.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/VoiceSearchWithKeyboard.apk:system/app/VoiceSearchWithKeyboard.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Maps.apk:data/app/com.google.android.apps.maps.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Street.apk:system/app/Street.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/YouTube.apk:system/app/YouTube.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GenieWidget.apk:system/app/GenieWidget.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Facebook.apk:data/app/com.facebook.katana.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/EnhancedGoogleSearchProvider.apk:system/app/EnhancedGoogleSearchProvider.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Gmail.apk:system/app/Gmail.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GmailProvider.apk:system/app/GmailProvider.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleApps.apk:system/app/GoogleApps.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleCheckin.apk:system/app/GoogleCheckin.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleSettingsProvider.apk:system/app/GoogleSettingsProvider.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/GoogleSubscribedFeedsProvider.apk:system/app/GoogleSubscribedFeedsProvider.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/gtalkservice.apk:system/app/gtalkservice.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/MarketUpdater.apk:system/app/MarketUpdater.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/MediaUploader.apk:system/app/MediaUploader.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/NetworkLocation.apk:system/app/NetworkLocation.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/SetupWizard.apk:system/app/SetupWizard.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Talk.apk:system/app/Talk.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/TalkProvider.apk:system/app/TalkProvider.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/PDFViewer.apk:data/app/com.htc.pdfreader.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/HTC_IME.apk:data/app/com.htc.android.htcime.apk
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/Clicker.apk:data/app/com.htc.clicker.apk
-
 # Libraries
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libspeech.so:system/lib/libspeech.so
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/libt9.so:system/lib/libt9.so
 #PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libcameraservice.so:system/lib/libcameraservice.so
 #PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libcamera.so:system/lib/libcamera.so
 #PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libqcamera.so:system/lib/libqcamera.so
@@ -171,11 +138,6 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/kernel/f
 
 
 # Permission and Framework
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.gtalkservice.jar:system/framework/com.google.android.gtalkservice.jar
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.datamessaging.xml:system/etc/permissions/com.google.android.datamessaging.xml
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.gtalkservice.xml:system/etc/permissions/com.google.android.gtalkservice.xml 
-PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/permissions/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/permissions/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml 
 
