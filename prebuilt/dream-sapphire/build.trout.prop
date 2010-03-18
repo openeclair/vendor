@@ -8,4 +8,4 @@ ro.product.manufacturer=htc
 ro.product.locale.language=en
 ro.product.locale.region=US
 ro.board.platform=msm7k
-cm.a2sd.force=True
+cm.a2sd.force=1
