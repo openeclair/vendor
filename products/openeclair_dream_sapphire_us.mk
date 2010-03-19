@@ -16,6 +16,9 @@
 
 # This is the top-level configuration for a US-configured OpenEclair build
 
+TARGET_OTA_SCRIPT_MODE=amend
+TARGET_OTA_BACKUPTOOL=True
+
 # Call overlays before running other builds
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
@@ -168,6 +171,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/rosystem:sys
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/rwsystem:system/bin/rwsystem 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/shutdown:system/bin/shutdown 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/usb-tether:system/bin/usb-tether 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh
 
 # /system/etc files
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/apns-conf.xml:system/etc/apns-conf.xml 
@@ -179,7 +183,6 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/AudioPara4-t
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/AudioPara4-sapphire.csv:system/etc/AudioPara4-sapphire.csv
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/terminfo/l/linux:system/etc/terminfo/l/linux
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/terminfo/u/unknown:system/etc/terminfo/u/unknown
-
 
 # /system/etc/init.d scripts
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner 
