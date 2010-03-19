@@ -68,10 +68,6 @@ PRODUCT_PACKAGES += \
 	DeskClock \
 	Gallery3D \
 	android.software.live_wallpaper.xml \
-	LiveWallpapersPicker \
-	LiveWallpapers \
-	MagicSmokeWallpapers \
-	VisualizationWallpapers \
 	Launcher \
 	libRS \
 	librs_jni 
