@@ -31,7 +31,7 @@ $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 #ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/android-dev-phone-privacy.html \
 #ro.com.google.clientidbase=android-tmobile \
 #keyguard.no_require_sim=true
-#ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v1.3
+#ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v2.0-test1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=24568
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_swappiness=60
