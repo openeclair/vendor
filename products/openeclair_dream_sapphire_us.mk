@@ -68,13 +68,10 @@ PRODUCT_PACKAGES += \
 	DeskClock \
 	Gallery3D \
 	android.software.live_wallpaper.xml \
+	Launcher2 \
 	Launcher \
 	libRS \
 	librs_jni 
-
-# Use ahmgsk_mod's Launcher2 for now
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/app/Launcher2.apk:system/app/Launcher2.apk
-
 
 # Custom Kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
