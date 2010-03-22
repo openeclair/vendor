@@ -38,6 +38,9 @@ PRODUCT_PACKAGES += \
 	CertInstaller \
 	DeskClock \
 	Gallery3D \
+	GoogleSearch \
+	Stk \
+	IM \
 	android.software.live_wallpaper.xml \
 	Launcher2 \
 	Launcher \
