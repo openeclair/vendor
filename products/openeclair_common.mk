@@ -50,7 +50,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/rosystem:system/bin/
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/rwsystem:system/bin/rwsystem 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/shutdown:system/bin/shutdown 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/openvpn-up.sh:system/xbin/openvpn-up.sh
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
 
 # /system/etc files
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml 
