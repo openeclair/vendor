@@ -16,7 +16,10 @@
 
 # This is the top-level configuration for a US-configured OpenEclair build
 
+# Use amend for otapackage creation for now.
 TARGET_OTA_SCRIPT_MODE=amend
+
+# Boolean to enable/disable backuptool.sh in otapackage.
 TARGET_OTA_BACKUPTOOL=True
 
 # Call overlays before running other builds
