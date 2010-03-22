@@ -1,0 +1,45 @@
+#!/system/bin/sh
+#
+#
+# handling xml in bash, yay.
+# Cyanogen, Mods by WesGarner for OpenEclair
+
+IN_PACKAGES=0;
+PACKAGES=/data/system/packages.xml
+
+if [ -e $PACKAGES ];
+then
+
+	cat $PACKAGES | while read line;
+	do
+		if [ "$IN_PACKAGES" = "0" ];
+		then
+			if ( echo $line | grep 'package name=\"android.tether' > /dev/null );
+			then
+				IN_PACKAGES=1;
+			elif ( echo $line | grep 'package name=\"com.facebook.katana' > /dev/null );
+			then
+				IN_PACKAGES=1;
+			elif ( echo $line | grep 'package name=\"com.htc.android.htcime' > /dev/null );
+			then
+				IN_PACKAGES=1;
+			elif ( echo $line | grep 'package name=\"com.htc.pdfreader' > /dev/null );
+			then
+				IN_PACKAGES=1;
+			elif ( echo $line | grep 'package name=\"com.google.android.apps.maps' > /dev/null );
+			then
+				IN_PACKAGES=1;
+			else
+				echo $line;
+			fi
+		else
+			if [ "$line" = "</package>" ];
+			then
+				IN_PACKAGES=0;
+			fi
+		fi;
+	done > $PACKAGES.tmp;
+
+	mv $PACKAGES.tmp $PACKAGES;
+
+fi;

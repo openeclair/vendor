@@ -1,0 +1,5 @@
+#!/system/bin/sh
+# WesGarner for OpenEclair
+
+mount -o rw,remount /system;
+echo "--- Mounted /system as read-write"
