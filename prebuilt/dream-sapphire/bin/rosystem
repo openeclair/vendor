@@ -1,5 +1,0 @@
-#!/system/bin/sh
-# WesGarner for OpenEclair
-
-mount -o remount,ro /system;
-echo "--- Mounted /system as read-only"
