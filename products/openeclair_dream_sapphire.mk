@@ -18,8 +18,12 @@
 # Call overlays before running other builds
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/dream-sapphire
 
-$(call inherit-product, vendor/openeclair/products/openeclair_common.mk)
+# Custom Kernel
+KERNEL_DEFCONFIG := wg_defconfig
+include kernel/AndroidKernel.mk
+
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
+$(call inherit-product, vendor/openeclair/products/openeclair_common.mk)
 
 PRODUCT_NAME := openeclair_dream_sapphire
 PRODUCT_BRAND := openeclair
@@ -46,9 +50,6 @@ PRODUCT_PACKAGES += \
 	Launcher \
 	libRS \
 	librs_jni 
-
-# Custom Kernel
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/../prebuilt/dream-sapphire/zImage
 
 # Custom build props / scripts
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/update-script:META-INF/com/google/android/update-script 
