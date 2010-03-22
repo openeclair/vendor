@@ -23,7 +23,6 @@ $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 
 PRODUCT_NAME := openeclair_dream_sapphire
 PRODUCT_BRAND := openeclair
-PRODUCT_DEVICE := dream_sapphire
 PRODUCT_MANUFACTURER := HTC
 
 # Build.prop Properties
