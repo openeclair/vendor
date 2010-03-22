@@ -51,9 +51,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += persist.service.auto.renice=0
 #ro.ril.htcmaskw1 = 14449 \
 #ro.ril.hsupa.category = 5 \
 
-# Build WebKit with V8
-JS_ENGINE=V8
-
 # Build with JIT, disable by default
 WITH_JIT := true
 PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.execution-mode=int:fast
