@@ -161,7 +161,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/rwsystem:sys
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/shutdown:system/bin/shutdown 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/bin/usb-tether:system/bin/usb-tether 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/openvpn-up.sh:system/bin/openvpn-up.sh
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/openvpn-up.sh:system/xbin/openvpn-up.sh
 
 # /system/etc files
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/apns-conf.xml:system/etc/apns-conf.xml 
