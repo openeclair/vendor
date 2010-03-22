@@ -98,23 +98,3 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libqcomm_omx
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/egl/egl.cfg:system/lib/egl/egl.cfg
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/egl/libGLES_qcom.so:system/lib/egl/libGLES_qcom.so
-
-# Modules
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.alias:system/lib/modules/2.6.29.6-wg/modules.alias
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.alias.bin:system/lib/modules/2.6.29.6-wg/modules.alias.bin
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.ccwmap:system/lib/modules/2.6.29.6-wg/modules.ccwmap
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.dep:system/lib/modules/2.6.29.6-wg/modules.dep
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.dep.bin:system/lib/modules/2.6.29.6-wg/modules.dep.bin
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.ieee1394map:system/lib/modules/2.6.29.6-wg/modules.ieee1394map
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.inputmap:system/lib/modules/2.6.29.6-wg/modules.inputmap
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.isapnpmap:system/lib/modules/2.6.29.6-wg/modules.isapnpmap
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.ofmap:system/lib/modules/2.6.29.6-wg/modules.ofmap
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.order:system/lib/modules/2.6.29.6-wg/modules.order
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.pcimap:system/lib/modules/2.6.29.6-wg/modules.pcimap
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.seriomap:system/lib/modules/2.6.29.6-wg/modules.seriomap
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.symbols:system/lib/modules/2.6.29.6-wg/modules.symbols
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.symbols.bin:system/lib/modules/2.6.29.6-wg/modules.symbols.bin
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/modules.usbmap:system/lib/modules/2.6.29.6-wg/modules.usbmap
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/kernel/drivers/net/wireless/tiwlan1251/wlan.ko:system/lib/modules/2.6.29.6-wg/kernel/drivers/net/wireless/tiwlan1251/wlan.ko
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/kernel/drivers/video/backlight/lcd.ko:system/lib/modules/2.6.29.6-wg/kernel/drivers/video/backlight/lcd.ko
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/modules/kernel/fs/compcache/ramzswap.ko:system/lib/modules/2.6.29.6-wg/kernel/fs/compcache/ramzswap.ko
