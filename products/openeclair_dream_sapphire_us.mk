@@ -22,6 +22,9 @@ TARGET_OTA_SCRIPT_MODE=amend
 # Boolean to enable/disable backuptool.sh in otapackage.
 TARGET_OTA_BACKUPTOOL=True
 
+# ROM Manager Developer ID
+PRODUCT_PROPERTY_OVERRIDES += ro.rommanager.developerid=openeclair
+
 # Call overlays before running other builds
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
