@@ -24,6 +24,9 @@ PRODUCT_BRAND := openeclair
 KERNEL_MODULES_DIR:=/system/lib/modules
 TINY_TOOLBOX:=true
 
+# Build WebKit with V8
+JS_ENGINE=v8
+
 # Boot Animation by MINUS_Stl
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/media/bootanimation.zip:data/media_tmp/bootanimation.zip
 
