@@ -29,7 +29,7 @@ PRODUCT_MANUFACTURER := HTC
 # Build.prop Properties
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=24568
-ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_swappiness=60
+ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_swp=60
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.auto.renice=0
 
 PRODUCT_PACKAGES += \
