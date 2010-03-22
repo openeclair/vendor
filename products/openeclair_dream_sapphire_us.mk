@@ -16,48 +16,24 @@
 
 # This is the top-level configuration for a US-configured OpenEclair build
 
-# Use amend for otapackage creation for now.
-TARGET_OTA_SCRIPT_MODE=amend
-
-# Boolean to enable/disable backuptool.sh in otapackage.
-TARGET_OTA_BACKUPTOOL=True
-
-# ROM Manager Developer ID
-PRODUCT_PROPERTY_OVERRIDES += ro.rommanager.developerid=openeclair
-
 # Call overlays before running other builds
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
 
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 
 # Build.prop Properties
-#PRODUCT_PROPERTY_OVERRIDES := \
-#ro.com.google.locationfeatures=1 \
-#ro.url.legal=http://www.google.com/intl/%s/mobile/android/android-dev-phone-legal.html \
-#ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/android-dev-phone-privacy.html \
-#ro.com.google.clientidbase=android-tmobile \
-#keyguard.no_require_sim=true
-#ADDITIONAL_BUILD_PROPERTIES += ro.modversion=OpenEclair-v2.0-test1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=24568
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_swappiness=60
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.auto.renice=0
 
-# RIL Hacks from Amon_RA
-#ADDITIONAL_BUILD_PROPERTIES += \
-#ro.ril.hep=1 \
-#ro.ril.enable.dtm=1 \
-#ro.ril.hsdpa.category=8 \
-#ro.ril.enable.a53=1 \
-#ro.ril.enable.3g.prefix=1 \
-#ro.ril.htcmaskw1.bitmask = 4294967295 \
-#ro.ril.htcmaskw1 = 14449 \
-#ro.ril.hsupa.category = 5 \
-
 KERNEL_MODULES_DIR:=/system/lib/modules
+TINY_TOOLBOX:=true
 
 PRODUCT_NAME := openeclair_dream_sapphire_us
-
+PRODUCT_BRANCD := openeclair
+PRODUCT_DEVICE := dream_sapphire
+PRODUCT_MANUFACTURER := HTC
 
 PRODUCT_PACKAGES += \
 	Superuser \
