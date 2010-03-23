@@ -20,7 +20,7 @@ PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/dream-sapphire
 
 # Custom Kernel
 KERNEL_DEFCONFIG := wg_defconfig
-#include kernel/AndroidKernel.mk
+include kernel/AndroidKernel.mk
 
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 $(call inherit-product, vendor/openeclair/products/openeclair_common.mk)
