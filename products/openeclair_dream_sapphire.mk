@@ -16,7 +16,7 @@
 # This is the top-level configuration for the OpenEclair build for Dream/Sapphire
 
 # Custom Kernel
-TARGET_KERNEL_CONFIG := wg_defconfig
+TARGET_KERNEL_CONFIG ?= wg_defconfig
 
 # Call overlays before running other builds
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/dream-sapphire

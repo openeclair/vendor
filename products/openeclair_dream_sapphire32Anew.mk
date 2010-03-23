@@ -16,7 +16,7 @@
 # This is the top-level configuration for the OpenEclair build for Dream/Sapphire
 
 # Custom Kernel
-TARGET_KERNEL_CONFIG := wg32a-new_defconfig
+TARGET_KERNEL_CONFIG ?= wg32a-new_defconfig
 
 $(call inherit-product, vendor/openeclair/products/openeclair_dream_sapphire32A.mk)
 
