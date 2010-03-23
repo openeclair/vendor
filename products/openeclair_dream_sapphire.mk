@@ -15,12 +15,11 @@
 #
 # This is the top-level configuration for the OpenEclair build for Dream/Sapphire
 
+# Custom Kernel
+TARGET_KERNEL_CONFIG := wg_defconfig
+
 # Call overlays before running other builds
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/dream-sapphire
-
-# Custom Kernel
-KERNEL_DEFCONFIG := wg_defconfig
-include kernel/AndroidKernel.mk
 
 $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 $(call inherit-product, vendor/openeclair/products/openeclair_common.mk)
