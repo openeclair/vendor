@@ -17,7 +17,7 @@
 
 # Custom Kernel
 KERNEL_DEFCONFIG := wg32a-new_defconfig
-# include kernel/AndroidKernel.mk
+include kernel/AndroidKernel.mk
 
 $(call inherit-product, vendor/openeclair/products/openeclair_dream_sapphire32A.mk)
 
