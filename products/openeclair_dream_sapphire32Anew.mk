@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2009 The Android Open Source Project
+# Copyright (C) 2010 The OpenEclair Team - Wes Garner and Chris Soyars
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,14 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# This is the top-level configuration for the OpenEclair build for Dream/Sapphire
 
-# This file is executed by build/envsetup.sh, and can use anything
-# defined in envsetup.sh.
-#
-# In particular, you can add lunch options with the add_lunch_combo
-# function: add_lunch_combo generic-eng
+# Custom Kernel
+KERNEL_DEFCONFIG := wg32a-new_defconfig
+# include kernel/AndroidKernel.mk
 
-add_lunch_combo openeclair_dream_sapphire-userdebug
-add_lunch_combo openeclair_dream_sapphire-eng
-add_lunch_combo openeclair_dream_sapphire32A-eng
-add_lunch_combo openeclair_dream_sapphire32Anew-eng
+$(call inherit-product, vendor/openeclair/products/openeclair_dream_sapphire32A.mk)
+
+PRODUCT_NAME := openeclair_dream_sapphire32Anew

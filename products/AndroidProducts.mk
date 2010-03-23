@@ -26,4 +26,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/openeclair_dream_sapphire.mk
+    $(LOCAL_DIR)/openeclair_common.mk \
+    $(LOCAL_DIR)/openeclair_dream_sapphire.mk \
+    $(LOCAL_DIR)/openeclair_dream_sapphire32A.mk \
+    $(LOCAL_DIR)/openeclair_dream_sapphire32Anew.mk
