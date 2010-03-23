@@ -22,3 +22,7 @@ KERNEL_DEFCONFIG := wg32a-new_defconfig
 $(call inherit-product, vendor/openeclair/products/openeclair_dream_sapphire32A.mk)
 
 PRODUCT_NAME := openeclair_dream_sapphire32Anew
+PRODUCT_MODEL := OpenEclair for Dream/Sapphire 32A on the Radio AMSS 6355
+PRODUCT_BRAND := openeclair
+PRODUCT_MANUFACTURER := HTC
+PRODUCT_DEVICE := dream-open

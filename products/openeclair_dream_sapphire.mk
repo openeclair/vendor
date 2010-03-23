@@ -26,8 +26,10 @@ $(call inherit-product, vendor/aosp/products/aosp_dream_us.mk)
 $(call inherit-product, vendor/openeclair/products/openeclair_common.mk)
 
 PRODUCT_NAME := openeclair_dream_sapphire
+PRODUCT_MODEL := OpenEclair for Dream/Sapphire
 PRODUCT_BRAND := openeclair
 PRODUCT_MANUFACTURER := HTC
+PRODUCT_DEVICE := dream-open
 
 # Build.prop Properties
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
