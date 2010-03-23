@@ -3,9 +3,28 @@
 # Backup and restore proprietary Android system files
 #
 
-C=/cache
-D=/data
+C=/tmp/backupdir
 S=/system
+D=/data
+V=OpenEclair
+
+PROCEED=1;
+
+check_prereq() {
+   if ( ! grep -q "^ro.modversion=.*$V.*" /system/build.prop );
+   then
+      echo "Not backing up files from incompatible version.";
+      PROCEED=0;
+   fi
+}
+
+check_installscript() {
+   if [ -f "/tmp/.installscript" ];
+   then
+      echo "/tmp/.installscript found. Skipping backuptool."
+      PROCEED=0;
+   fi
+}
 
 get_files() {
     cat <<EOF
@@ -98,25 +117,39 @@ case "$1" in
    backup)
       mount $S
       mount $D
-      mount $C
-      get_files | while read FILE REPLACEMENT; do
-         backup_file $S/$FILE
-      done
-      get_files_data | while read FILE REPLACEMENT; do
-         backup $D/$FILE
-      done
+      check_prereq;
+      check_installscript;
+      if [ $PROCEED -ne 0 ];
+      then
+         rm -rf $C
+         mkdir -p $C
+         get_files | while read FILE REPLACEMENT; do
+            backup_file $S/$FILE
+         done
+         get_files_data | while read FILE REPLACEMENT; do
+            backup_file $D/$FILE
+         done
+      fi
+      umount $S
+      umount $D
    ;;
    restore)
-      get_files | while read FILE REPLACEMENT; do
-         R=""
-         [ -n "$REPLACEMENT" ] && R="$S/$REPLACEMENT"
-         restore_file $S/$FILE $R
-      done
-      get_files_data | while read FILE REPLACEMENT; do
-         R=""
-         [ -n "$REPLACEMENT" ] && R="$D/$REPLACEMENT"
-         restore_files $D/$FILE $R
-      done
+      check_prereq;
+      check_installscript;
+      if [ $PROCEED -ne 0 ];
+      then
+         get_files | while read FILE REPLACEMENT; do
+            R=""
+            [ -n "$REPLACEMENT" ] && R="$S/$REPLACEMENT"
+            restore_file $S/$FILE $R
+         done
+         get_files_data | while read FILE REPLACEMENT; do
+            R=""
+            [ -n "$REPLACEMENT" ] && R="$D/$REPLACEMENT"
+            restore_file $D/$FILE $R
+         done
+         rm -rf $C
+      fi
    ;;
    *)
       echo "Usage: $0 {backup|restore}"
@@ -124,3 +157,4 @@ case "$1" in
 esac
 
 exit 0
+
