@@ -5,7 +5,6 @@
 
 C=/tmp/backupdir
 S=/system
-D=/data
 V=OpenEclair
 
 PROCEED=1;
@@ -61,16 +60,6 @@ etc/permissions/com.google.android.maps.xml
 EOF
 }
 
-get_files_data() {
-    cat <<EOF
-app/com.google.android.apps.maps.apk
-app/com.facebook.katana.apk
-app/com.htc.pdfreader.apk
-app/com.htc.android.htcime.apk
-app/com.htc.clicker.apk
-EOF
-}
-
 backup_file() {
    if [ -e "$1" ];
    then
@@ -116,7 +105,6 @@ restore_file() {
 case "$1" in
    backup)
       mount $S
-      mount $D
       check_prereq;
       check_installscript;
       if [ $PROCEED -ne 0 ];
@@ -126,12 +114,8 @@ case "$1" in
          get_files | while read FILE REPLACEMENT; do
             backup_file $S/$FILE
          done
-         get_files_data | while read FILE REPLACEMENT; do
-            backup_file $D/$FILE
-         done
       fi
       umount $S
-      umount $D
    ;;
    restore)
       check_prereq;
@@ -142,11 +126,6 @@ case "$1" in
             R=""
             [ -n "$REPLACEMENT" ] && R="$S/$REPLACEMENT"
             restore_file $S/$FILE $R
-         done
-         get_files_data | while read FILE REPLACEMENT; do
-            R=""
-            [ -n "$REPLACEMENT" ] && R="$D/$REPLACEMENT"
-            restore_file $D/$FILE $R
          done
          rm -rf $C
       fi
