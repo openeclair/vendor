@@ -29,7 +29,6 @@ symlink toolbox SYSTEM:bin/vmstat
 symlink toolbox SYSTEM:bin/watchprops
 symlink toolbox SYSTEM:bin/wipe
 symlink logcat SYSTEM:bin/lolcat
-symlink /system/lib/modules/2.6.29.6-wg/kernel/drivers/net/wireless/tiwlan1251/wlan.ko SYSTEM:lib/modules/wlan.ko
 symlink /system/xbin/su SYSTEM:bin/su
 
 show_progress 0.1 0
