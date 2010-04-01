@@ -30,7 +30,7 @@ PRODUCT_BRAND := openeclair
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_DEVICE := dream-open
 
-# Build.prop Properties
+# Default.prop Properties
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=24568
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_swp=60
@@ -53,8 +53,7 @@ PRODUCT_PACKAGES += \
 	librs_jni 
 
 # Custom build props / scripts
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/update-script:META-INF/com/google/android/update-script 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/build.prop:system/build.prop 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/update-script:META-INF/com/google/android/update-script
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/build.sapphire.prop:system/build.sapphire.prop
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/build.trout.prop:system/build.trout.prop 
 PRODUCT_COPY_FILES += vendor/openeclair/root/init.trout.rc:$(TARGET_ROOT_OUT)/root/init.trout.rc 
