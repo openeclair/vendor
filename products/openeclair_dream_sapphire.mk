@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
 	Launcher2 \
 	VoiceDialer \
 	libRS \
-	librs_jni \ 
+	librs_jni \
 	OEUpdater
 
 # Custom build props / scripts
