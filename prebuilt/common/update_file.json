@@ -1,0 +1,28 @@
+{
+    "MirrorList": [
+        "http://openeclair-updater.googlecode.com/files/",
+	"http://www.androidspin.com/downloads.php?dir=openteam/ROM/"
+],
+    "UpdateList": [
+	{
+            "mod": "ADP1",
+            "board": "trout|sapphire",
+            "type": "rom",
+            "name": "OpenEclair-v1.1",
+            "version": "1.1",
+            "description": "",
+            "branch": "S",
+            "filename": "OpenEclair-v1.1-STABLE.zip"
+        },
+	{
+            "mod": "ADP1",
+            "board": "trout|sapphire",
+            "type": "rom",
+            "name": "OpenEclair-v1.0",
+            "version": "1.0",
+            "description": "",
+            "branch": "S",
+            "filename": "OpenEclair-v1.0.zip"
+        }
+    ]
+}
