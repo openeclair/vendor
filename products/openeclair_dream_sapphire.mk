@@ -39,16 +39,18 @@ ADDITIONAL_DEFAULT_PROPERTIES += persist.service.auto.renice=0
 PRODUCT_PACKAGES += \
 	Superuser \
 	AccountAndSyncSettings \
+	GoogleContactsProvider \
+	GoodSubscribedFeedsProvider \
 	Bluetooth \
 	CertInstaller \
 	DeskClock \
 	Gallery3D \
-	GoogleSearch \
 	Stk \
 	IM \
-	android.software.live_wallpaper.xml \
-	Launcher2 \
+	ImProvider \
 	Launcher \
+	Launcher2 \
+	VoiceDialer \
 	libRS \
 	librs_jni 
 
