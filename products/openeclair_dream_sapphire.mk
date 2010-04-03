@@ -52,8 +52,7 @@ PRODUCT_PACKAGES += \
 	Launcher2 \
 	VoiceDialer \
 	libRS \
-	librs_jni \
-	OEUpdater
+	librs_jni
 
 # Custom build props / scripts
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/update-script:META-INF/com/google/android/update-script
