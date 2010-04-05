@@ -15,6 +15,11 @@
 #
 # This is the top-level configuration for the OpenEclair build for Dream/Sapphire
 
+# Backup Tool
+TARGET_OTA_SCRIPT_MODE=amend
+TARGET_OTA_BACKUPTOOL=True
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh
+
 # Custom Kernel
 TARGET_KERNEL_CONFIG ?= wg_defconfig
 
