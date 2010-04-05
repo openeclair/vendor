@@ -18,11 +18,14 @@
 # Call overlays before running other builds
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/common
 
+$(call inherit-product, vendor/openeclair/products/openeclair_core.mk)
+
 PRODUCT_NAME := openeclair_common
 PRODUCT_BRAND := openeclair
 
 KERNEL_MODULES_DIR:=/system/lib/modules
 TINY_TOOLBOX:=true
+NO_DEFAULT_SOUNDS:=true
 
 # Build WebKit with V8
 JS_ENGINE=v8
@@ -100,7 +103,6 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/blank:system/xbin/bb/pla
 # Scripts and Binaries
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/appfix:system/bin/appfix
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/arenice:system/bin/arenice
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/e2fsck:system/xbin/e2fsck 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/nano:system/xbin/nano
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/firstboot:system/bin/firstboot 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/fix_permissions:system/bin/fix_permissions 
@@ -109,6 +111,9 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/rwsystem:system/bin/
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/shutdown:system/bin/shutdown 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
+
+# Libraries
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libncurses.so:system/lib/libncurses.so
 
 # /system/etc files
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml 
@@ -387,63 +392,3 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/media/ui/KeypressReturn.
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/media/ui/KeypressSpacebar.ogg:data/media_tmp/audio/ui/KeypressSpacebar.ogg
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/media/ui/KeypressStandard.ogg:data/media_tmp/audio/ui/KeypressStandard.ogg
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/media/ui/VideoRecord.ogg:data/media_tmp/audio/ui/VideoRecord.ogg
-
-PRODUCT_LOCALES := \
-    en_US \
-    ar_EG \
-    ar_IL \
-    bg_BG \
-    ca_ES \
-    cs_CZ \
-    da_DK \
-    de_AT \
-    de_CH \
-    de_DE \
-    de_LI \
-    el_GR \
-    en_AU \
-    en_CA \
-    en_GB \
-    en_IE \
-    en_IN \
-    en_NZ \
-    en_SG \
-    en_ZA \
-    es_ES \
-    es_US \
-    fi_FI \
-    fr_BE \
-    fr_CA \
-    fr_CH \
-    fr_FR \
-    he_IL \
-    hi_IN \
-    hr_HR \
-    hu_HU \
-    id_ID \
-    it_CH \
-    it_IT \
-    iw_IL \
-    ja_JP \
-    ko_KR \
-    lt_LT \
-    lv_LV \
-    nb_NO \
-    nl_BE \
-    nl_NL \
-    pl_PL \
-    pt_BR \
-    pt_PT \
-    ro_RO \
-    ru_RU \
-    sk_SK \
-    sl_SI \
-    sr_RS \
-    sv_SE \
-    th_TH \
-    tl_PH \
-    tr_TR \
-    uk_UA \
-    vi_VN \
-    zh_CN \
-    zh_TW

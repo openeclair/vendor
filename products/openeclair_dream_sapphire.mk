@@ -36,23 +36,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=24568
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_swp=60
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.auto.renice=0
 
-PRODUCT_PACKAGES += \
-	Superuser \
-	AccountAndSyncSettings \
-	GoogleContactsProvider \
-	GoodSubscribedFeedsProvider \
-	Bluetooth \
-	CertInstaller \
-	DeskClock \
-	Gallery3D \
-	Stk \
-	IM \
-	ImProvider \
-	Launcher \
-	Launcher2 \
-	VoiceDialer \
-	libRS \
-	librs_jni
 
 # Custom build props / scripts
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/update-script:META-INF/com/google/android/update-script
@@ -75,13 +58,6 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/AudioPara4-s
 #PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libqcamera.so:system/lib/libqcamera.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/keychars/sapphire-keypad.kcm.bin:system/etc/keychars/sapphire-keypad.kcm.bin
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/hw/sensors.sapphire.so:system/lib/hw/sensors.sapphire.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libncurses.so:system/lib/libncurses.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_blkid.so:system/lib/libext2_blkid.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_com_err.so:system/lib/libext2_com_err.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_e2p.so:system/lib/libext2_e2p.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2fs.so:system/lib/libext2fs.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_profile.so:system/lib/libext2_profile.so
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libext2_uuid.so:system/lib/libext2_uuid.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libstagefright_omx.so:system/lib/libstagefright_omx.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libomx_aacdec_sharedlibrary.so:system/lib/libomx_aacdec_sharedlibrary.so
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libomx_amrdec_sharedlibrary.so:system/lib/libomx_amrdec_sharedlibrary.so
