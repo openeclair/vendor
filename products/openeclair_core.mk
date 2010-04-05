@@ -18,11 +18,12 @@
 PRODUCT_NAME := openeclair_core
 PRODUCT_BRAND := openeclair
 
+# GoogleSubscribedFeedsProvider = AccountAndSyncSettings
+# GoogleContactsSyncAdapter ?? GoogleContactsProvider
 PRODUCT_PACKAGES := \
 	Superuser \
 	AccountAndSyncSettings \
         GoogleContactsSyncAdapter \
-        GoogleSubscribedFeedsProvider \
 	Bluetooth \
 	CertInstaller \
 	DeskClock \
@@ -33,7 +34,6 @@ PRODUCT_PACKAGES := \
 	Launcher2 \
 	VoiceDialer \
 	libRS \
-	UserDictionaryProvider \
 	librs_jni \
     AlarmProvider \
     ApplicationsProvider \
@@ -43,7 +43,7 @@ PRODUCT_PACKAGES := \
     CalendarProvider \
     Camera \
     Contacts \
-    ContactsProvider \
+    GoogleContactsProvider \
     DownloadProvider \
     DrmProvider \
     Email \
@@ -53,6 +53,7 @@ PRODUCT_PACKAGES := \
     GoogleSearch \
     HTMLViewer \
     LatinIME \
+    libjni_latinime \
     Launcher \
     MediaProvider \
     Mms \
