@@ -122,6 +122,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/gps.conf:system/etc/
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/terminfo/l/linux:system/etc/terminfo/l/linux
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/terminfo/u/unknown:system/etc/terminfo/u/unknown
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/e2fsck.conf:system/etc/e2fsck.conf
 
 # /system/etc/init.d scripts
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner 
