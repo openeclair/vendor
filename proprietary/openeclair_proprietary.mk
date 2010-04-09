@@ -56,6 +56,9 @@ PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.datamessa
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.gtalkservice.xml:system/etc/permissions/com.google.android.gtalkservice.xml 
 PRODUCT_COPY_FILES += vendor/openeclair/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml 
 
+# /system/etc files
+PRODUCT_COPY_FILES += vendor/openeclair/proprietary/.htcime:system/etc/.htcime
+
 # Libraries
 #PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libcameraservice.so:system/lib/libcameraservice.so
 #PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/libcamera.so:system/lib/libcamera.so

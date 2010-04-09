@@ -33,6 +33,15 @@ echo "--- Symlinking Media Folder";
 	busybox mv /data/media_tmp /data/media;
 	busybox ln -s /data/media /system/media;
 
+echo "--- Setting up .htcime";
+    if [ -e /system/etc/.htcime ]; then
+	if [ ! -e /sdcard/.htcime ]; then
+		busybox mv /system/etc/.htcime /sdcard/.htcime;
+	else
+		busybox rm /system/etc/.htcime;
+	fi;
+    fi;
+
 echo "--- Symlinking some System Apps";
 busybox mv /data/app_s_tmp /data/app_s;
 for sysapp in /data/app_s/* ; do
