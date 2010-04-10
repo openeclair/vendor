@@ -77,7 +77,16 @@ PRODUCT_PACKAGES := \
     WebSearchProvider \
     framework-res
 
-
+# Default.prop Properties
+ADDITIONAL_DEFAULT_PROPERTIES := \
+	persist.service.memctl_state=1 \
+	persist.service.memctl_size=24568 \
+	persist.service.memctl_swp=60 \
+	persist.service.auto.renice=0 \
+	ro.secure=0 \
+	ro.allow.mock.location=1 \
+	ro.debuggable=1 \
+	persist.service.adb.enable=1
 
 ifneq ($(NO_DEFAULT_SOUNDS),true)
 PRODUCT_PROPERTY_OVERRIDES := \

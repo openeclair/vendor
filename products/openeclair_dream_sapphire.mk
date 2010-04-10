@@ -39,12 +39,6 @@ PRODUCT_DEVICE := dream-open
 # Use Passion fingerprint to fix Market issues
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=EPE54B BUILD_DISPLAY_ID=EPE54B PRODUCT_NAME=passion BUILD_FINGERPRINT=google/passion/passion/mahimahi:2.1-update1/ERE27/24178:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.1-update1 ERE27 24178 release-keys"
 
-# Default.prop Properties
-ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_state=1
-ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_size=24568
-ADDITIONAL_DEFAULT_PROPERTIES += persist.service.memctl_swp=60
-ADDITIONAL_DEFAULT_PROPERTIES += persist.service.auto.renice=0
-
 # Sapphire Keypad/Sensors
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/etc/keychars/sapphire-keypad.kcm.bin:system/etc/keychars/sapphire-keypad.kcm.bin
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire/lib/hw/sensors.sapphire.so:system/lib/hw/sensors.sapphire.so
