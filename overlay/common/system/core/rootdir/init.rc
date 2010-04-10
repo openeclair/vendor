@@ -1,4 +1,3 @@
-
 on init
 
 sysclktz 0
@@ -18,10 +17,8 @@ loglevel 3
     export TERMINFO /system/etc/terminfo
     export TERM linux
 
-
 # Backward compatibility
     symlink /system/etc /etc
-    symlink /system/lib /lib
     symlink /sys/kernel/debug /d
 
 # create mountpoints and mount tmpfs on sqlite_stmt_journals
@@ -41,8 +38,6 @@ loglevel 3
     write /proc/cpu/alignment 4
     write /proc/sys/kernel/sched_latency_ns 10000000
     write /proc/sys/kernel/sched_wakeup_granularity_ns 2000000
-    write /proc/sys/kernel/sched_compat_yield 1
-    write /proc/sys/kernel/sched_child_runs_first 0
 
 # Create cgroup mount points for process groups
     mkdir /dev/cpuctl
@@ -172,9 +167,9 @@ on boot
     setprop ro.VISIBLE_APP_MEM 2048
     setprop ro.SECONDARY_SERVER_MEM 4096
     setprop ro.BACKUP_APP_MEM 4096
-    setprop ro.HOME_APP_MEM 2048
+    setprop ro.HOME_APP_MEM 1536
     setprop ro.HIDDEN_APP_MEM 5120
-    setprop ro.CONTENT_PROVIDER_MEM 6144
+    setprop ro.CONTENT_PROVIDER_MEM 5632
     setprop ro.EMPTY_APP_MEM 6144
 
 # Write value must be consistent with the above properties.
@@ -382,16 +377,6 @@ service reboot /system/bin/shutdown -r
 
 service poweroff /system/bin/shutdown
     disabled
-
-# Automatic Renice
-# Note: Turning off this service is controlled inside the script itself which 
-#       reads the persist.service.auto.renice variable at each instance
-service arenice /system/bin/arenice
-    disabled
-    oneshot
-
-on property:persist.service.auto.renice=1
-    start arenice
 
 # USB internet sharing
 service dnsmasq /system/bin/logwrapper /system/bin/dnsmasq -d
