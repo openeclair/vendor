@@ -58,6 +58,7 @@ PRODUCT_PACKAGES := \
     MediaProvider \
     Mms \
     Music \
+    OEUpdater \
     PackageInstaller \
     Phone \
     PicoTts \
