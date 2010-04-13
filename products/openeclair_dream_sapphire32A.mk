@@ -17,6 +17,7 @@
 
 # Custom Kernel
 TARGET_KERNEL_CONFIG ?= wg32a_defconfig
+#BOARD_KERNEL_BASE := 19200000
 
 $(call inherit-product, vendor/openeclair/products/openeclair_dream_sapphire.mk)
 
@@ -25,8 +26,6 @@ PRODUCT_MODEL := OpenEclair for Dream/Sapphire for 32A Devices
 PRODUCT_BRAND := openeclair
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_DEVICE := dream-open
-
-BOARD_KERNEL_BASE := 19200000
 
 # Device-specific files for 32A
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/dream-sapphire32A/etc/AudioPara4-trout.csv:system/etc/AudioPara4-trout.csv 

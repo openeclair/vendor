@@ -127,7 +127,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/e2fsck.conf:system/e
 # /system/etc/init.d scripts
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl 
-PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot 
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/06firstboot 
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/etc/init.d/20userinit:system/etc/init.d/20userinit

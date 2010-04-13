@@ -22,6 +22,7 @@ PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/bin/backuptool.sh:system
 
 # Custom Kernel
 TARGET_KERNEL_CONFIG ?= wg_defconfig
+BOARD_KERNEL_BASE ?= 10000000
 
 # Call overlays before running other builds
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/dream-sapphire
