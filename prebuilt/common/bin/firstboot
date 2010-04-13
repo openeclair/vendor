@@ -23,7 +23,9 @@
 echo "--- Erasing unneeded/old files (expect some errors to show)";
 	busybox rm /data/local/bootanimation.zip
 	busybox rm /data/app/*HTC*IME*
-	busybox rm /data/app/wireless_tether_2_0-pre3_eclair.apk
+	busybox rm /sd-ext/app/*HTC*IME*
+	busybox rm /data/app/wireless_tether*.apk
+	busybox rm /sd-ext/app/wireless_tether*.apk
 	busybox rm -r /data/system-cache
 	busybox rm -r /data/app_s
 	busybox rm -r /data/media
