@@ -102,7 +102,6 @@ PRODUCT_COPY_FILES += \
     vendor/openeclair/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd \
     vendor/openeclair/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
     vendor/openeclair/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
-    vendor/openeclair/prebuilt/common/etc/init.d/04modules:system/etc/init.d/04modules \
     vendor/openeclair/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/openeclair/prebuilt/common/etc/gps.conf:system/etc/gps.conf \
     vendor/openeclair/prebuilt/common/bin/firstboot:system/bin/firstboot \
