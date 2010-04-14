@@ -65,7 +65,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += Superuser
 
-PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay
+PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/common
 
 # Enable animated GIF in WebKit
 ENABLE_ANIMATED_GIF:=true

@@ -15,4 +15,6 @@ PRODUCT_COPY_FILES += \
     vendor/openeclair/prebuilt/dream_sapphire/build.sapphire.prop:system/build.sapphire.prop \
     vendor/openeclair/prebuilt/dream_sapphire/build.trout.prop:system/build.trout.prop
 
+PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/dream-sapphire
+
 include vendor/htc-open/dream_sapphire/device.mk
