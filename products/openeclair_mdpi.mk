@@ -95,7 +95,7 @@ PRODUCT_COPY_FILES += \
     vendor/openeclair/prebuilt/common/etc/dnsmasq.conf:system/etc/dnsmasq.conf \
     vendor/openeclair/prebuilt/common/etc/terminfo/u/unknown:system/etc/terminfo/u/unknown \
     vendor/openeclair/prebuilt/common/etc/terminfo/l/linux:system/etc/terminfo/l/linux \
-    vendor/openeclair/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
+    vendor/openeclair/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/06firstboot \
     vendor/openeclair/prebuilt/common/etc/init.d/20userinit:system/etc/init.d/20userinit \
     vendor/openeclair/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/openeclair/prebuilt/common/etc/init.d/99complete:system/etc/init.d/99complete \
