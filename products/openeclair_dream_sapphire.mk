@@ -17,4 +17,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/dream-sapphire
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.modversion=OpenEclair-2.0
+
+
 include vendor/htc-open/dream_sapphire/device.mk
