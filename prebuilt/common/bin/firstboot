@@ -31,33 +31,33 @@ echo "--- Erasing unneeded/old files (expect some errors to show)";
 	busybox rm -r /data/media
 	busybox rm -r /data/.media;
 
-echo "--- Symlinking Media Folder";
-	busybox mv /data/media_tmp /data/media;
-	busybox ln -s /data/media /system/media;
+#echo "--- Symlinking Media Folder";
+#	busybox mv /data/media_tmp /data/media;
+#	busybox ln -s /data/media /system/media;
 
-echo "--- Setting up .htcime";
-    if [ -e /system/etc/.htcime ]; then
-	if [ ! -e /sdcard/.htcime ]; then
-		busybox mv /system/etc/.htcime /sdcard/.htcime;
-	else
-		busybox rm /system/etc/.htcime;
-	fi;
-    fi;
+#echo "--- Setting up .htcime";
+#    if [ -e /system/etc/.htcime ]; then
+#	if [ ! -e /sdcard/.htcime ]; then
+#		busybox mv /system/etc/.htcime /sdcard/.htcime;
+#	else
+#		busybox rm /system/etc/.htcime;
+#	fi;
+#    fi;
 
-echo "--- Symlinking some System Apps";
-busybox mv /data/app_s_tmp /data/app_s;
-for sysapp in /data/app_s/* ; do
-	if [ -e /system/app/$(basename $sysapp) ]; then
-		busybox rm /system/app/$(basename $sysapp);
-	fi;
-	if [ -h /system/app/$(basename $sysapp) ]; then
-		busybox rm /system/app/$(basename $sysapp);
-	fi;
-	busybox ln -s $sysapp /system/app/$(basename $sysapp);
-	echo "$sysapp Symlinked to data partition";
-done;
+#echo "--- Symlinking some System Apps";
+#busybox mv /data/app_s_tmp /data/app_s;
+#for sysapp in /data/app_s/* ; do
+#	if [ -e /system/app/$(basename $sysapp) ]; then
+#		busybox rm /system/app/$(basename $sysapp);
+#	fi;
+#	if [ -h /system/app/$(basename $sysapp) ]; then
+#		busybox rm /system/app/$(basename $sysapp);
+#	fi;
+#	busybox ln -s $sysapp /system/app/$(basename $sysapp);
+#	echo "$sysapp Symlinked to data partition";
+#done;
 
-echo "--- Running System App/Framework Fix - This will take a while";
-    if [ -e /system/bin/appfix ]; then
-	/system/bin/sh /system/bin/appfix;
-    fi;
+#echo "--- Running System App/Framework Fix - This will take a while";
+#    if [ -e /system/bin/appfix ]; then
+#	/system/bin/sh /system/bin/appfix;
+#    fi;
