@@ -20,6 +20,8 @@ PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/dream-sapphire
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=OpenEclair-2.0
 
+NO_DEFAULT_SOUNDS:=true
+
 # Default.prop Properties
 ADDITIONAL_DEFAULT_PROPERTIES := \
 	persist.service.memctl_state=1 \

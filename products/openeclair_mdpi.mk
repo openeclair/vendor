@@ -59,6 +59,7 @@ PRODUCT_PACKAGES += \
     IM \
     ImProvider \
     Gallery3D \
+    GoogleContactsProvider \
     GoogleSearch \
     GlobalSearch \
     LatinIME \
@@ -92,9 +93,11 @@ KERNEL_MODULES_DIR:=/system/lib/modules
 # Tiny toolbox
 TINY_TOOLBOX:=true
 
-# Pick up some sounds
-include frameworks/base/data/sounds/OriginalAudio.mk
-include frameworks/base/data/sounds/AudioPackage4.mk
+ifneq ($(NO_DEFAULT_SOUNDS),true)
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.config.notification_sound=OnTheHunt.ogg \
+    ro.config.alarm_alert=Alarm_Classic.ogg
+endif
 
 TARGET_OTA_BACKUPTOOL=False
 
@@ -121,7 +124,7 @@ PRODUCT_COPY_FILES += \
     vendor/openeclair/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/openeclair/prebuilt/common/bin/appfix:system/bin/appfix \
     vendor/openeclair/prebuilt/common/bin/rwsystem:system/bin/rwsystem \
-    vendor/openeclair/prebuilt/common/bin/nano:system/bin/nano \
+    vendor/openeclair/prebuilt/common/bin/nano:system/xbin/nano \
     vendor/openeclair/prebuilt/common/bin/shutdown:system/bin/shutdown \
     vendor/openeclair/prebuilt/common/bin/e2fsck:system/bin/e2fsck \
     vendor/openeclair/prebuilt/common/bin/autozipalign:system/bin/autozipalign \
@@ -141,6 +144,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 endif
 
 # Extra Audio Notifications and Ringtones
+# TODO: Cleanup
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/media/alarms/Alarm_Beep_01.ogg:data/media_tmp/audio/alarms/Alarm_Beep_01.ogg
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/media/alarms/Alarm_Beep_02.ogg:data/media_tmp/audio/alarms/Alarm_Beep_02.ogg
 PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/media/alarms/Alarm_Beep_03.ogg:data/media_tmp/audio/alarms/Alarm_Beep_03.ogg
