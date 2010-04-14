@@ -56,14 +56,26 @@ USE_CAMERA_STUB := false
 PRODUCT_PACKAGES += \
     DeskClock \
     DownloadProvider \
+    IM \
+    ImProvider \
     Gallery3D \
+    GoogleSearch \
     GlobalSearch \
+    LatinIME \
+    Launcher2 \
+    Superuser \
     SoundRecorder \
     VoiceDialer \
+    WiFiTether \
     libRS \
     librs_ji
 
-PRODUCT_PACKAGES += Superuser
+# Live Wallpapers
+PRODUCT_PACKAGES += \
+    Basic \
+    LivePicker \
+    MagicSmoke \
+    MusicVisualization
 
 PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/common
 
@@ -116,12 +128,18 @@ PRODUCT_COPY_FILES += \
     vendor/openeclair/prebuilt/common/bin/memctl:system/bin/memctl \
     vendor/openeclair/prebuilt/common/bin/fix_permissions:system/bin/fix_permissions \
     vendor/openeclair/prebuilt/common/bin/rosystem:system/bin/rosystem \
-    vendor/openeclair/prebuilt/common/bin/arenice:system/bin/arenice
+    vendor/openeclair/prebuilt/common/bin/arenice:system/bin/arenice \
+    vendor/openeclair/prebuilt/common/lib/libncurses.so:system/lib/libncurses.so
 
-PRODUCT_PACKAGES += \
-    Provision \
-    GoogleSearch \
-    LatinIME
+# Boot Animation by MINUS_Stl
+PRODUCT_COPY_FILES += vendor/openeclair/prebuilt/common/media/bootanimation.zip:data/media_tmp/bootanimation.zip
+
+ifneq ($(NO_DEFAULT_SOUNDS),true)
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.config.notification_sound=OnTheHunt.ogg \
+    ro.config.alarm_alert=Alarm_Classic.ogg
+endif
+
 
 PRODUCT_LOCALES := \
     en_US \

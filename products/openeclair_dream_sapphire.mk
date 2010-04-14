@@ -20,5 +20,11 @@ PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/dream-sapphire
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=OpenEclair-2.0
 
+# Default.prop Properties
+ADDITIONAL_DEFAULT_PROPERTIES := \
+	persist.service.memctl_state=1 \
+	persist.service.memctl_size=24568 \
+	persist.service.memctl_swp=60 \
+	persist.service.auto.renice=0
 
 include vendor/htc-open/dream_sapphire/device.mk
