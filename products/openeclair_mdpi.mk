@@ -85,7 +85,7 @@ PRODUCT_PACKAGE_OVERLAYS := vendor/openeclair/overlay/common
 #ENABLE_ANIMATED_GIF:=true
 
 # Build WebKit with V8
-JS_ENGINE=v8
+#JS_ENGINE=v8
 
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
